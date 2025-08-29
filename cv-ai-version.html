@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kristiyan Tsvetanov - Principal AI Engineer</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+          sans-serif;
+        background: #000000;
+        color: #ffffff;
+        line-height: 1.6;
+        padding: 20px;
+        margin: 0;
+        font-size: 16px;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .cv-container {
+        max-width: 800px;
+        margin: 0 auto;
+        background: transparent;
+        padding: 0;
+      }
+
+      .header {
+        text-align: left;
+        margin-bottom: 60px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 40px;
+        background: transparent;
+        border-radius: 0;
+        padding: 0 0 40px 0;
+        border: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .profile-image-container {
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: flex-start;
+      }
+
+      .profile-image {
+        width: 80px;
+        height: 80px;
+        border-radius: 12px;
+        object-fit: cover;
+        border: 2px solid rgba(134, 239, 172, 0.3);
+      }
+
+      .name {
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: #ffffff;
+        margin-bottom: 8px;
+        letter-spacing: -0.02em;
+      }
+
+      .title {
+        font-size: 1.1rem;
+        color: #888888;
+        font-weight: 400;
+        margin-bottom: 20px;
+        letter-spacing: 0;
+      }
+
+      .tagline {
+        font-size: 1rem;
+        color: #cccccc;
+        max-width: 600px;
+        line-height: 1.7;
+        font-weight: 400;
+      }
+
+      .stats {
+        display: flex;
+        gap: 40px;
+        margin: 40px 0 60px 0;
+        flex-wrap: wrap;
+      }
+
+      .stat {
+        text-align: left;
+        padding: 0;
+        background: transparent;
+        border: none;
+        position: relative;
+        padding-left: 32px;
+      }
+
+      .stat::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 16px;
+        height: 16px;
+        background: linear-gradient(135deg, #86efac, #22c55e);
+        border-radius: 4px;
+        opacity: 0.8;
+      }
+
+      .stat-number {
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: #ffffff;
+        margin-bottom: 4px;
+        font-family: 'Inter', sans-serif;
+      }
+
+      .stat-label {
+        color: #666666;
+        font-size: 0.9rem;
+        font-weight: 400;
+      }
+
+      .section {
+        margin: 60px 0;
+      }
+
+      .section-title {
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: #ffffff;
+        margin-bottom: 30px;
+        letter-spacing: -0.01em;
+        position: relative;
+        padding-bottom: 16px;
+      }
+
+      .section-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 40px;
+        height: 3px;
+        background: linear-gradient(90deg, #86efac, #22c55e);
+        border-radius: 2px;
+      }
+
+      .experience-item,
+      .project-item {
+        background: transparent;
+        border: none;
+        padding: 24px 0;
+        margin-bottom: 24px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .experience-item:hover,
+      .project-item:hover {
+        background: transparent;
+        border-color: rgba(255, 255, 255, 0.1);
+        transform: none;
+      }
+
+      .experience-item:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+      }
+
+      .projects-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+        margin-top: 24px;
+      }
+
+      .project-card {
+        background: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 12px;
+        padding: 20px;
+        transition: all 0.2s ease;
+      }
+
+      .project-card:hover {
+        border-color: rgba(134, 239, 172, 0.2);
+        background: rgba(134, 239, 172, 0.02);
+      }
+
+      .project-title {
+        color: #ffffff;
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 8px;
+        letter-spacing: -0.01em;
+      }
+
+      .project-subtitle {
+        color: #86efac;
+        font-size: 0.9rem;
+        font-weight: 500;
+        margin-bottom: 16px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .project-description {
+        color: #cccccc;
+        font-size: 0.9rem;
+        line-height: 1.5;
+        margin-bottom: 16px;
+      }
+
+      .project-features {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .project-features li {
+        color: #aaaaaa;
+        font-size: 0.85rem;
+        margin-bottom: 6px;
+        padding-left: 16px;
+        position: relative;
+      }
+
+      .project-features li::before {
+        content: '▸';
+        position: absolute;
+        left: 0;
+        color: #86efac;
+        font-size: 0.7rem;
+        opacity: 0.8;
+      }
+
+      .project-link {
+        display: inline-block;
+        margin-top: 12px;
+        color: #86efac;
+        text-decoration: none;
+        font-size: 0.85rem;
+        font-weight: 500;
+        transition: color 0.2s ease;
+      }
+
+      .project-link:hover {
+        color: #22c55e;
+      }
+
+      .experience-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 16px;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .role {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #ffffff;
+        margin-bottom: 4px;
+      }
+
+      .company {
+        color: #888888;
+        font-weight: 400;
+        font-size: 1rem;
+      }
+
+      .period {
+        color: #555555;
+        font-size: 0.9rem;
+        font-weight: 400;
+        white-space: nowrap;
+      }
+
+      .description {
+        color: #cccccc;
+        line-height: 1.6;
+        font-size: 1rem;
+        margin-bottom: 20px;
+        font-weight: 400;
+      }
+
+      .achievement {
+        border-left: none;
+        padding: 12px 0 12px 24px;
+        margin: 0;
+        color: #aaaaaa;
+        font-weight: 400;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        position: relative;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+      }
+
+      .achievement::before {
+        content: '•';
+        position: absolute;
+        left: 0;
+        color: #86efac;
+        font-size: 1.2rem;
+        opacity: 0.8;
+      }
+
+      .achievement:last-child {
+        border-bottom: none;
+      }
+
+      .achievement strong {
+        color: #ffffff;
+        font-weight: 500;
+      }
+
+      .achievement a {
+        color: #86efac;
+        text-decoration: none;
+        transition: all 0.2s ease;
+      }
+
+      .achievement a:hover {
+        color: #22c55e;
+        text-decoration: underline;
+      }
+
+      .what-i-bring {
+        background: transparent;
+        border: none;
+        padding: 0;
+        margin: 60px 0;
+      }
+
+      .what-i-bring h3 {
+        color: #ffffff;
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin-bottom: 30px;
+        letter-spacing: -0.01em;
+        position: relative;
+        padding-bottom: 16px;
+      }
+
+      .what-i-bring h3::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 40px;
+        height: 3px;
+        background: linear-gradient(90deg, #86efac, #22c55e);
+        border-radius: 2px;
+      }
+
+      .what-i-bring ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .what-i-bring li {
+        padding: 20px 0 20px 32px;
+        color: #cccccc;
+        font-weight: 400;
+        position: relative;
+        font-size: 1rem;
+        line-height: 1.6;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      }
+
+      .what-i-bring li::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 24px;
+        width: 8px;
+        height: 8px;
+        background: linear-gradient(135deg, #86efac, #22c55e);
+        border-radius: 50%;
+        opacity: 0.8;
+      }
+
+      .what-i-bring li:last-child {
+        border-bottom: none;
+      }
+
+      .what-i-bring li strong {
+        color: #ffffff;
+        font-weight: 500;
+      }
+
+      .skills-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .skill-category {
+        background: transparent;
+        border: none;
+        padding: 0;
+      }
+
+      .skill-category:hover {
+        background: transparent;
+        border-color: transparent;
+        transform: none;
+      }
+
+      .skill-category h4 {
+        color: #ffffff;
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 20px;
+        letter-spacing: -0.01em;
+        position: relative;
+        padding-bottom: 12px;
+      }
+
+      .skill-category h4::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 24px;
+        height: 2px;
+        background: linear-gradient(90deg, #86efac, #22c55e);
+        border-radius: 1px;
+      }
+
+      .skill-item {
+        padding: 0;
+        margin: 0;
+        border: none;
+        background: transparent;
+        display: inline-block;
+        margin-right: 24px;
+        margin-bottom: 12px;
+        position: relative;
+        padding-left: 20px;
+      }
+
+      .skill-item::before {
+        content: '▸';
+        position: absolute;
+        left: 0;
+        color: #86efac;
+        font-size: 0.8rem;
+        opacity: 0.8;
+      }
+
+      .skill-name {
+        color: #888888;
+        font-weight: 400;
+        font-size: 1rem;
+        display: inline;
+        transition: color 0.2s ease;
+      }
+
+      .skill-name:hover {
+        color: #ffffff;
+      }
+
+      .contact-info {
+        text-align: left;
+        margin-top: 60px;
+        padding: 0;
+        background: transparent;
+        border: none;
+        border-radius: 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 40px;
+      }
+
+      .contact-info h3 {
+        color: #ffffff;
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin-bottom: 30px;
+        letter-spacing: -0.01em;
+        position: relative;
+        padding-bottom: 16px;
+      }
+
+      .contact-info h3::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 40px;
+        height: 3px;
+        background: linear-gradient(90deg, #86efac, #22c55e);
+        border-radius: 2px;
+      }
+
+      .contact-item {
+        display: inline-block;
+        margin: 0 24px 12px 0;
+        color: #888888;
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 1rem;
+        padding: 0;
+        background: transparent;
+        border: none;
+        border-radius: 0;
+        transition: none;
+      }
+
+      .contact-item:hover {
+        color: #ffffff;
+        background: transparent;
+        border-color: transparent;
+        transform: none;
+      }
+
+      .mrr-badge {
+        background: #333333;
+        color: #ffffff;
+        padding: 4px 12px;
+        border-radius: 4px;
+        font-size: 0.85rem;
+        font-weight: 500;
+        display: inline-block;
+        margin-left: 12px;
+      }
+
+      /* Mobile Responsiveness */
+      @media (max-width: 768px) {
+        body {
+          padding: 16px;
+          font-size: 15px;
+        }
+
+        .cv-container {
+          max-width: 100%;
+        }
+
+        .name {
+          font-size: 2rem;
+        }
+
+        .title {
+          font-size: 1rem;
+        }
+
+        .tagline {
+          font-size: 0.95rem;
+          line-height: 1.6;
+        }
+
+        .stats {
+          gap: 24px;
+          margin: 32px 0 48px 0;
+        }
+
+        .stat-number {
+          font-size: 1.5rem;
+        }
+
+        .header {
+          margin-bottom: 48px;
+          padding-bottom: 32px;
+        }
+
+        .section {
+          margin: 48px 0;
+        }
+
+        .section-title {
+          font-size: 1.2rem;
+          margin-bottom: 24px;
+        }
+
+        .experience-item {
+          padding-bottom: 32px;
+          margin-bottom: 32px;
+        }
+
+        .experience-header {
+          flex-direction: column;
+          align-items: flex-start;
+          margin-bottom: 12px;
+        }
+
+        .period {
+          margin-top: 4px;
+        }
+
+        .description {
+          font-size: 0.95rem;
+          margin-bottom: 16px;
+        }
+
+        .achievement {
+          font-size: 0.9rem;
+          padding: 6px 0;
+        }
+
+        .what-i-bring {
+          margin: 48px 0;
+        }
+
+        .what-i-bring h3 {
+          font-size: 1.2rem;
+          margin-bottom: 24px;
+        }
+
+        .what-i-bring li {
+          padding: 12px 0;
+          font-size: 0.95rem;
+        }
+
+        .skills-grid {
+          gap: 32px;
+        }
+
+        .skill-category h4 {
+          font-size: 1rem;
+          margin-bottom: 16px;
+        }
+
+        .skill-item {
+          margin-right: 16px;
+          margin-bottom: 8px;
+        }
+
+        .skill-name {
+          font-size: 0.95rem;
+        }
+
+        .contact-info {
+          margin-top: 48px;
+          padding-top: 32px;
+        }
+
+        .contact-info h3 {
+          font-size: 1.2rem;
+          margin-bottom: 24px;
+        }
+
+        .contact-item {
+          display: block;
+          margin: 0 0 16px 0;
+          font-size: 0.95rem;
+        }
+
+        .projects-grid {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+      }
+
+      @media print {
+        @page {
+          margin: 0 !important;
+          size: A4;
+        }
+
+        * {
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+        }
+
+        body {
+          background: #000000 !important;
+          color: #ffffff !important;
+          padding: 0 !important;
+          margin: 0 !important;
+          font-size: 12px !important;
+          line-height: 1.4 !important;
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+          min-height: 100vh !important;
+        }
+
+        .cv-container {
+          background: #000000 !important;
+          border: none !important;
+          padding: 20px !important;
+          margin: 0 !important;
+          max-width: none !important;
+          min-height: 100vh !important;
+          box-sizing: border-box !important;
+        }
+
+        .header {
+          margin-bottom: 30px !important;
+          padding-bottom: 20px !important;
+        }
+
+        .name {
+          color: #ffffff !important;
+          font-size: 1.8rem !important;
+        }
+
+        .title {
+          color: #888888 !important;
+          font-size: 0.9rem !important;
+        }
+
+        .tagline {
+          color: #cccccc !important;
+          font-size: 0.85rem !important;
+        }
+
+        .stats {
+          margin: 20px 0 30px 0 !important;
+          gap: 20px !important;
+        }
+
+        .stat {
+          padding: 0 !important;
+          border: none !important;
+          background: transparent !important;
+        }
+
+        .stat-number {
+          color: #ffffff !important;
+          font-size: 1.2rem !important;
+        }
+
+        .section {
+          margin: 30px 0 !important;
+          page-break-inside: avoid;
+        }
+
+        .section-title {
+          color: #ffffff !important;
+          font-size: 1rem !important;
+          margin-bottom: 16px !important;
+        }
+
+        .experience-item {
+          padding: 0 0 20px 0 !important;
+          margin-bottom: 20px !important;
+          border: none !important;
+          background: transparent !important;
+          border-bottom: 1px solid #333333 !important;
+          page-break-inside: avoid;
+        }
+
+        .experience-header {
+          margin-bottom: 8px !important;
+        }
+
+        .role {
+          color: #ffffff !important;
+          font-size: 0.9rem !important;
+        }
+
+        .company {
+          color: #888888 !important;
+        }
+
+        .what-i-bring h3,
+        .skill-category h4,
+        .contact-info h3 {
+          color: #ffffff !important;
+        }
+
+        .period {
+          color: #555555 !important;
+          font-size: 0.7rem !important;
+        }
+
+        .description {
+          color: #cccccc !important;
+          font-size: 0.8rem !important;
+        }
+
+        .achievement {
+          border-left: none !important;
+          background: none !important;
+          padding: 4px 0 !important;
+          margin: 0 !important;
+          color: #aaaaaa !important;
+          font-size: 0.75rem !important;
+        }
+
+        .what-i-bring {
+          background: transparent !important;
+          border: none !important;
+          padding: 0 !important;
+          margin: 30px 0 !important;
+        }
+
+        .what-i-bring li {
+          color: #cccccc !important;
+          font-size: 0.8rem !important;
+          border-bottom: 1px solid #333333 !important;
+          padding: 8px 0 !important;
+        }
+
+        .skills-grid {
+          gap: 20px !important;
+        }
+
+        .skill-category {
+          background: transparent !important;
+          border: none !important;
+          padding: 0 !important;
+        }
+
+        .skill-item {
+          background: transparent !important;
+          border: none !important;
+          padding: 0 !important;
+          margin: 0 16px 8px 0 !important;
+        }
+
+        .skill-name {
+          color: #888888 !important;
+          font-size: 0.8rem !important;
+        }
+
+        .contact-info {
+          background: transparent !important;
+          border: none !important;
+          border-top: 1px solid #333333 !important;
+          padding: 20px 0 0 0 !important;
+          margin-top: 30px !important;
+        }
+
+        .contact-item {
+          color: #888888 !important;
+          font-size: 0.8rem !important;
+          margin: 0 16px 8px 0 !important;
+        }
+
+        .profile-image {
+          border-color: #333333 !important;
+        }
+
+        /* Ensure full page coverage */
+        html,
+        body {
+          width: 100% !important;
+          height: 100% !important;
+          overflow: hidden !important;
+        }
+
+        /* Remove any remaining margins/padding from all elements */
+        * {
+          margin: 0 !important;
+          padding: 0 !important;
+        }
+
+        /* Ensure CV container fills the entire page */
+        .cv-container {
+          width: 100% !important;
+          height: 100% !important;
+          position: absolute !important;
+          top: 0 !important;
+          left: 0 !important;
+          right: 0 !important;
+          bottom: 0 !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cv-container">
+      <!-- Header -->
+      <div class="header">
+        <div class="profile-image-container">
+          <img
+            src="./kris.png"
+            alt="Kristiyan Tsvetanov"
+            class="profile-image"
+          />
+        </div>
+        <h1 class="name">Kristiyan Tsvetanov</h1>
+        <h2 class="title">Principal AI Engineer & Systems Architect</h2>
+        <p class="tagline">
+          I architect and deploy scalable, production-grade agentic AI systems
+          that solve complex business problems. Proven expertise in designing
+          multi-agent architectures, implementing RAG pipelines, and leading the
+          end-to-end development of profitable AI-powered SaaS platforms. 9+
+          years of experience building and scaling intelligent applications from
+          concept to production.
+        </p>
+      </div>
+
+      <!-- Key Stats -->
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-number">$3K</div>
+          <div class="stat-label">Monthly Recurring Revenue</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">55K+</div>
+          <div class="stat-label">AI Platform Users</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">9+</div>
+          <div class="stat-label">Years Building Products</div>
+        </div>
+      </div>
+
+      <!-- What I Bring -->
+      <div class="what-i-bring">
+        <h3>What I Bring</h3>
+        <ul>
+          <li>
+            <strong>End-to-End AI System Architecture:</strong> From initial
+            concept and technical design to cloud deployment and MLOps, I lead
+            the entire lifecycle of building robust, scalable AI systems using
+            microservices architecture and containerization.
+          </li>
+          <li>
+            <strong>Production-Grade AI Engineering:</strong> Expert in
+            implementing multi-agent systems, LLM orchestration (LangChain), and
+            advanced RAG pipelines using vector databases that deliver reliable,
+            high-performance results at scale.
+          </li>
+          <li>
+            <strong>Business-Driven Technical Solutions:</strong> Every
+            architectural decision is aligned with business goals, ensuring AI
+            features deliver measurable value, performance, and a clear ROI
+            through data-driven optimization.
+          </li>
+          <li>
+            <strong>Scalable Cloud Deployment & DevOps:</strong> Proven ability
+            to architect and deploy AI services on cloud infrastructure
+            (AWS/GCP), leveraging CI/CD pipelines and containerization to ensure
+            high availability and performance at scale.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Skills -->
+      <div class="section">
+        <h2 class="section-title">Technical Expertise</h2>
+        <div class="skills-grid">
+          <div class="skill-category primary-stack">
+            <h4>AI & Machine Learning</h4>
+            <div class="skill-item">
+              <span class="skill-name">LLMs (GPT-4, Claude, Llama)</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">LangChain & Multi-Agent Systems</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Vector Embeddings & RAG Pipelines</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">NLP & Agentic Workflows</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name"
+                >Predictive Modeling & ML Algorithms</span
+              >
+            </div>
+            <div class="skill-item">
+              <span class="skill-name"
+                >Python (PyTorch, Scikit-learn, Pandas)</span
+              >
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h4>System Architecture & Backend</h4>
+            <div class="skill-item">
+              <span class="skill-name">Microservices Architecture</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">RESTful APIs & System Design</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Node.js & Express.js</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">PostgreSQL & Vector Databases</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">MongoDB & Database Design</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Ruby on Rails</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills-grid" style="margin-top: 12px">
+          <div class="skill-category">
+            <h4>Cloud & DevOps (MLOps)</h4>
+            <div class="skill-item">
+              <span class="skill-name">DigitalOcean</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Docker & Containerization</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">CI/CD Pipelines (GitHub Actions)</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Infrastructure as Code</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name"
+                >Monitoring & Performance Optimization</span
+              >
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Load Balancing & Scalability</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h4>Frontend & Integration</h4>
+            <div class="skill-item">
+              <span class="skill-name">React & Next.js</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">TypeScript & JavaScript (ES6+)</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Vue.js</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">API Integration & SDKs</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Server-Side Rendering (SSR)</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Payment Systems (Stripe)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- Experience -->
+      <div class="section">
+        <h2 class="section-title">Career Journey</h2>
+
+        <div class="experience-item">
+          <div class="experience-header">
+            <div>
+              <h3 class="role">Founder & Principal AI Engineer</h3>
+              <p class="company">Moonhythe</p>
+            </div>
+            <span class="period">2022 - Present</span>
+          </div>
+          <p class="description">
+            Architected, built, and deployed multiple AI-powered SaaS products
+            from the ground up, focusing on creating scalable, multi-agent
+            systems and robust backend infrastructure. Oversaw all aspects of
+            the engineering lifecycle, including system design, cloud
+            architecture, MLOps, and API integration.
+          </p>
+
+          <div class="projects-grid">
+            <div class="project-card">
+              <h4 class="project-title">BookWiz.io</h4>
+              <p class="project-subtitle">AI Writing Platform</p>
+              <p class="project-description">
+                Multi-agent RAG system with GPT-4, Claude, and vector embeddings for real-time writing assistance.
+              </p>
+              <ul class="project-features">
+                <li>$3K MRR, 55K+ Users</li>
+                <li>AWS microservices with Node.js, Docker, PostgreSQL</li>
+                <li>99.9% uptime, 200ms response time</li>
+                <li>Full CI/CD pipeline for rapid iteration</li>
+              </ul>
+              <div style="display: flex; gap: 12px; margin-top: 12px;">
+                <a href="https://bookwiz.io" class="project-link">Visit Site →</a>
+                <a href="https://gitfront.io/r/KristiyanTs/5j4JaUk1B74j/bookwiz.io/" class="project-link">View Code →</a>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <h4 class="project-title">Vkashti.bar</h4>
+              <p class="project-subtitle">AI Operations System</p>
+              <p class="project-description">
+                AI-powered operations platform with Discord bots and real-time interactive quiz software.
+              </p>
+              <ul class="project-features">
+                <li>Real-time quiz software with live submissions</li>
+                <li>Host grading and audience participation</li>
+                <li>NLP-driven Discord bots for operations</li>
+                <li>70% reduction in manual overhead</li>
+              </ul>
+              <a href="https://gitfront.io/r/KristiyanTs/6NZW9HfdMA1v/vkashti/" class="project-link">View Code →</a>
+            </div>
+
+            <div class="project-card">
+              <h4 class="project-title">DevSender</h4>
+              <p class="project-subtitle">AI Email Marketing</p>
+              <p class="project-description">
+                Intelligent email targeting system with natural language to SQL conversion for customer segmentation.
+              </p>
+              <ul class="project-features">
+                <li>Natural language audience queries</li>
+                <li>AI-powered SQL generation</li>
+                <li>Unique link tracking tokens</li>
+                <li>Click-through rate analytics</li>
+              </ul>
+              <a href="#" class="project-link">View Code →</a>
+            </div>
+
+            <div class="project-card">
+              <h4 class="project-title">AI Trading System</h4>
+              <p class="project-subtitle">Algorithmic Trading</p>
+              <p class="project-description">
+                PineScript strategies in TradingView with webhook signals to Python server for automated execution.
+              </p>
+              <ul class="project-features">
+                <li>PineScript strategies in TradingView</li>
+                <li>Webhook events to Python server</li>
+                <li>ML models for market prediction</li>
+                <li>18% annualized return</li>
+              </ul>
+              <a href="https://github.com/kristiyanTs/" class="project-link">View Code →</a>
+            </div>
+          </div>
+
+
+        </div>
+
+        <div class="experience-item">
+          <div class="experience-header">
+            <div>
+              <h3 class="role">Frontend Developer</h3>
+              <p class="company">Betty - Online Casino</p>
+            </div>
+            <span class="period">2021 - 2022</span>
+          </div>
+          <p class="description">
+            Developed secure user interface and admin panel for online casino
+            platform. Built authentication systems, intelligent referral
+            programs with tracking algorithms, and responsive interfaces working
+            alongside
+            <a
+              href="https://github.com/lyubomir-bozhinov"
+              style="color: #86efac; text-decoration: underline"
+              >Lyubomir Bozhinov</a
+            >.
+          </p>
+          <div class="achievement">
+            Implemented secure authentication & admin dashboard systems
+          </div>
+          <div class="achievement">
+            Built intelligent referral tracking with automated algorithms
+          </div>
+        </div>
+
+        <div class="experience-item">
+          <div class="experience-header">
+            <div>
+              <h3 class="role">Lead Frontend Developer</h3>
+              <p class="company">ResearchSpace</p>
+            </div>
+            <span class="period">2019 - 2021</span>
+          </div>
+          <p class="description">
+            Led frontend modernization from jQuery to React architecture,
+            improving performance by 40% and reducing maintenance overhead by
+            60%. Integrated AI-powered features for enhanced user experience.
+          </p>
+          <div class="achievement">
+            Delivered 40% performance improvement through React migration &
+            modern architecture
+          </div>
+        </div>
+
+        <div class="experience-item">
+          <div class="experience-header">
+            <div>
+              <h3 class="role">Co-Founder & CTO</h3>
+              <p class="company">BgMentor</p>
+            </div>
+            <span class="period">2017 - 2019</span>
+          </div>
+          <p class="description">
+            Led technical strategy and scalable platform architecture using Ruby
+            on Rails microservices and Vue.js frontend. Built intelligent
+            matching algorithms and recommendation systems supporting 10,000+
+            users.
+          </p>
+          <div class="achievement">
+            Architected scalable platform supporting 10,000+ users with
+            AI-powered matching algorithms
+          </div>
+          <div class="achievement">
+            Led team of 3 developers building intelligent recommendation systems
+          </div>
+        </div>
+
+        <div class="experience-item">
+          <div class="experience-header">
+            <div>
+              <h3 class="role">Digital Library Full Stack Developer</h3>
+              <p class="company">The University of Edinburgh</p>
+            </div>
+            <span class="period">Feb 2017 - Jun 2017</span>
+          </div>
+          <p class="description">
+            Developed three full-stack web applications for the university's digital library system, working with Ruby on Rails, PHP, Bootstrap, and jQuery to create responsive, user-friendly interfaces for academic collections and library services.
+          </p>
+          <div class="achievement">
+            <strong>Library Maps:</strong> Built Ruby on Rails web app with client-side rendering and developed algorithm for locating books on library shelves
+          </div>
+          <div class="achievement">
+            <strong>Coimbra Project:</strong> Created responsive website using Bootstrap, jQuery, PHP, and Skylight for European university exhibition representing 40 institutions
+          </div>
+          <div class="achievement">
+            <strong>Public Art:</strong> Developed specialized collection management system for The University of Edinburgh's art collection
+          </div>
+          <div class="achievement">
+            🔗 <a href="https://www.librarymaps.is.ed.ac.uk" style="color: #86efac; text-decoration: underline;">Library Maps</a> | <a href="https://collections.ed.ac.uk/coimbra" style="color: #86efac; text-decoration: underline;">Coimbra Project</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Education -->
+      <div class="section">
+        <h2 class="section-title">Education</h2>
+        <div class="experience-item">
+          <div class="experience-header">
+            <div>
+              <h3 class="role">
+                BSc in Computer Science and Management Science
+              </h3>
+              <p class="company">The University of Edinburgh</p>
+            </div>
+            <span class="period">2015 - 2019</span>
+          </div>
+          <p class="description">
+            Comprehensive education in computer science fundamentals, AI
+            algorithms, software engineering principles, and business management
+            strategies for product development.
+          </p>
+        </div>
+
+        <div class="experience-item">
+          <div class="experience-header">
+            <div>
+              <h3 class="role">High School Diploma</h3>
+              <p class="company">Sofia High School of Mathematics</p>
+            </div>
+            <span class="period">2008 - 2015</span>
+          </div>
+          <p class="description">
+            Specialized mathematics and science education with focus on advanced
+            problem-solving and analytical thinking.
+          </p>
+        </div>
+      </div>
+
+      <!-- Contact -->
+      <div class="contact-info">
+        <h3>Let's Build Next-Generation AI Systems Together</h3>
+        <a href="mailto:kristiyan.c@gmail.com" class="contact-item"
+          ><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 8px; vertical-align: middle;">
+            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+          </svg>kristiyan.c@gmail.com</a
+        >
+        <a href="https://www.linkedin.com/in/kristiyan-ts/" class="contact-item"
+          ><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 8px; vertical-align: middle;">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.047-1.852-3.047-1.853 0-2.136 1.445-2.136 2.939v5.677H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>LinkedIn</a
+        >
+        <a href="https://github.com/kristiyanTs/" class="contact-item"
+          ><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 8px; vertical-align: middle;">
+            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+          </svg>GitHub</a
+        >
+      </div>
+    </div>
+  </body>
+</html>

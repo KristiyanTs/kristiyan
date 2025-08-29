@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kristiyan Tsvetanov - CV</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #e2e8f0;
+            line-height: 1.6;
+            padding: 40px;
+            min-height: 100vh;
+        }
+        
+        .cv-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(15, 23, 42, 0.8);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            backdrop-filter: blur(20px);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, #0ea5e9, #06b6d4);
+            border-radius: 2px;
+        }
+        
+        .profile-image-container {
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .profile-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid rgba(14, 165, 233, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+        
+        .profile-image:hover {
+            transform: scale(1.05);
+        }
+        
+        .name {
+            font-size: 3.5rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #0ea5e9, #06b6d4, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+            letter-spacing: -0.02em;
+        }
+        
+        .title {
+            font-size: 1.5rem;
+            color: #94a3b8;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+        
+        .tagline {
+            font-size: 1.1rem;
+            color: #cbd5e1;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .stat {
+            text-align: center;
+            padding: 20px;
+            background: rgba(30, 41, 59, 0.5);
+            border-radius: 15px;
+            border: 1px solid rgba(148, 163, 184, 0.1);
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #0ea5e9;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            color: #94a3b8;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        .section {
+            margin: 40px 0;
+        }
+        
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #f1f5f9;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .section-title::before {
+            content: '';
+            width: 4px;
+            height: 25px;
+            background: linear-gradient(180deg, #0ea5e9, #06b6d4);
+            border-radius: 2px;
+        }
+        
+        .experience-item, .project-item {
+            background: rgba(30, 41, 59, 0.3);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .experience-item:hover, .project-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            border-color: rgba(14, 165, 233, 0.3);
+        }
+        
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        
+        .role {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #f1f5f9;
+        }
+        
+        .company {
+            color: #0ea5e9;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .period {
+            color: #64748b;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        .description {
+            color: #cbd5e1;
+            line-height: 1.7;
+        }
+        
+        .achievement {
+            background: rgba(34, 197, 94, 0.1);
+            border: 1px solid rgba(34, 197, 94, 0.2);
+            border-radius: 8px;
+            padding: 12px 16px;
+            margin: 10px 0;
+            color: #86efac;
+            font-weight: 500;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+        
+        .skill-category {
+            background: rgba(30, 41, 59, 0.3);
+            border-radius: 15px;
+            padding: 25px;
+            border: 1px solid rgba(148, 163, 184, 0.1);
+        }
+        
+        .skill-category h4 {
+            color: #0ea5e9;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .skill-item {
+            padding: 12px 16px;
+            margin: 8px 0;
+            border-radius: 8px;
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(148, 163, 184, 0.15);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .skill-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #0ea5e9, #06b6d4);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .skill-item:hover {
+            transform: translateY(-2px);
+            border-color: rgba(14, 165, 233, 0.3);
+            box-shadow: 0 4px 12px rgba(14, 165, 233, 0.15);
+        }
+        
+        .skill-item:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .skill-name {
+            color: #f1f5f9;
+            font-weight: 600;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .skill-name::before {
+            content: '▸';
+            color: #0ea5e9;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+        
+        .primary-stack .skill-name::before {
+            content: '⭐';
+        }
+        
+        .contact-info {
+            text-align: center;
+            margin-top: 40px;
+            padding: 30px;
+            background: rgba(30, 41, 59, 0.3);
+            border-radius: 15px;
+            border: 1px solid rgba(148, 163, 184, 0.1);
+        }
+        
+        .contact-info h3 {
+            color: #0ea5e9;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .contact-item {
+            display: inline-block;
+            margin: 0 15px;
+            color: #cbd5e1;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .contact-item:hover {
+            color: #0ea5e9;
+        }
+        
+        .mrr-badge {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            display: inline-block;
+            margin-left: 15px;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                color: black;
+                padding: 20px;
+            }
+            
+            .cv-container {
+                background: white;
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+            
+            .name {
+                background: linear-gradient(135deg, #0ea5e9, #06b6d4);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-container">
+        <!-- Header -->
+        <div class="header">
+            <div class="profile-image-container">
+                <img src="./kris.png" alt="Kristiyan Tsvetanov" class="profile-image">
+            </div>
+            <h1 class="name">Kristiyan Tsvetanov</h1>
+            <h2 class="title">AI Engineer & Product Builder</h2>
+            <p class="tagline">I turn complex AI problems into profitable SaaS solutions that generate real revenue - like scaling Bookwiz.io to $3K MRR in under 12 months. With 9+ years of startup experience, I specialize in building intelligent applications that solve real-world problems and generate revenue from day one.</p>
+        </div>
+        
+        <!-- Key Stats -->
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-number">$3K</div>
+                <div class="stat-label">Monthly Recurring Revenue</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">15+</div>
+                <div class="stat-label">Client Projects Delivered</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">9+</div>
+                <div class="stat-label">Years of Experience</div>
+            </div>
+        </div>
+        
+        <!-- Experience -->
+        <div class="section">
+            <h2 class="section-title">Career Journey</h2>
+            
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <h3 class="role">Founder & Lead Developer</h3>
+                        <p class="company">Moonhythe</p>
+                    </div>
+                    <span class="period">2016 - Present</span>
+                </div>
+                <p class="description">Built and scaled multiple SaaS products to profitability, including Bookwiz.io ($3K MRR). Delivered 15+ client projects with 95% client retention rate. Specialized in AI integration and full-stack development.</p>
+                <div class="achievement">🚀 Scaled Bookwiz.io to $3K MRR in under 12 months</div>
+                <div class="achievement">🔄 95% client retention rate with repeat business</div>
+            </div>
+            
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <h3 class="role">Lead Frontend Developer</h3>
+                        <p class="company">ResearchSpace</p>
+                    </div>
+                    <span class="period">2019 - 2021</span>
+                </div>
+                <p class="description">Led frontend development for new product launches and modernized core application from jQuery to React, improving performance by 40% and reducing maintenance overhead by 60%.</p>
+                <div class="achievement">⚡ Improved application performance by 40%</div>
+                <div class="achievement">🔧 Reduced maintenance overhead by 60%</div>
+            </div>
+            
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <h3 class="role">Frontend Developer</h3>
+                        <p class="company">Betty - Online Casino</p>
+                    </div>
+                    <span class="period">2021 - 2022</span>
+                </div>
+                <p class="description">Developed user interface and admin panel for online casino platform working alongside lead frontend developer <a href="https://github.com/lyubomir-bozhinov" style="color: #0ea5e9; text-decoration: underline;">Lyubomir Bozhinov</a>. Built secure login system, comprehensive referral program, and engaging home page interface.</p>
+                <div class="achievement">🔐 Implemented secure user authentication and login system</div>
+                <div class="achievement">👥 Built comprehensive referral program with tracking and rewards</div>
+                <div class="achievement">🎰 Developed responsive casino home page and user interface</div>
+            </div>
+            
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <h3 class="role">Co-Founder & CTO</h3>
+                        <p class="company">BgMentor</p>
+                    </div>
+                    <span class="period">2019 - 2021</span>
+                </div>
+                <p class="description">Led technical strategy and platform development using Ruby on Rails and Vue.js. Built scalable architecture supporting 10,000+ users and managed team of 3 developers.</p>
+                <div class="achievement">👥 Built platform supporting 10,000+ users</div>
+                <div class="achievement">🏗️ Managed team of 3 developers</div>
+            </div>
+        </div>
+        
+        <!-- Featured Projects -->
+        <div class="section">
+            <h2 class="section-title">Featured Projects</h2>
+            
+            <div class="project-item">
+                <div class="experience-header">
+                    <h3 class="role">Bookwiz.io - AI Writing Platform</h3>
+                    <span class="mrr-badge">$3K MRR</span>
+                </div>
+                <p class="description"><strong>Problem:</strong> Authors struggled with writer's block and needed intelligent assistance to improve their writing quality and productivity.</p>
+                <p class="description"><strong>Solution:</strong> Built an agentic AI writing assistant using LLMs and vector embeddings for context-aware suggestions, with a complete SaaS platform including payments and SEO optimization.</p>
+                <p class="description"><strong>Result:</strong> Scaled to $3,000 MRR, serving hundreds of authors with a Node.js backend, React frontend, Stripe integration, and server-side rendering for maximum visibility.</p>
+                <div class="achievement">🌍 Platform now serves 55,000+ registered users worldwide</div>
+                <div class="achievement">⚡ Achieved 99.9% uptime with 200ms average response time</div>
+                <div class="achievement">🔗 <a href="https://gitfront.io/r/KristiyanTs/5j4JaUk1B74j/bookwiz.io/" style="color: #86efac; text-decoration: underline;">View Source Code</a></div>
+            </div>
+            
+            <div class="project-item">
+                <div class="experience-header">
+                    <h3 class="role">Vkashti.bar - Complete Bar Ecosystem</h3>
+                </div>
+                <p class="description"><strong>Problem:</strong> Sofia bar needed a complete digital solution for reservations, event management, staff coordination, inventory tracking, and interactive quiz nights.</p>
+                <p class="description"><strong>Solution:</strong> Developed a comprehensive web platform with customer reservation system, admin dashboard for staff management, and AI-powered Discord bots for automated task management and inventory tracking using natural language processing.</p>
+                <p class="description"><strong>Result:</strong> Streamlined bar operations with automated SMS confirmations, intelligent task delegation, AI-driven inventory management, and engaging quiz nights that increased operational efficiency and customer satisfaction.</p>
+                <div class="achievement">📱 QR code quiz system with real-time team scoring</div>
+                <div class="achievement">📅 Complete reservation system with SMS confirmations</div>
+                <div class="achievement">🤖 AI-powered Discord bots for task management and inventory tracking</div>
+                <div class="achievement">👥 Automated staff task delegation based on shift schedules</div>
+                <div class="achievement">🧠 Natural language processing for inventory management commands</div>
+                <div class="achievement">🔗 <a href="https://gitfront.io/r/KristiyanTs/6NZW9HfdMA1v/vkashti/" style="color: #86efac; text-decoration: underline;">Main Platform</a> | <a href="https://gitfront.io/r/KristiyanTs/7A8F7R2QdwG9/vkashti-bots/" style="color: #86efac; text-decoration: underline;">Discord Bots</a></div>
+            </div>
+            
+            <div class="project-item">
+                <div class="experience-header">
+                    <h3 class="role">Automated Trading Bots</h3>
+                </div>
+                <p class="description"><strong>Problem:</strong> Manual trading was time-consuming and prone to emotional decisions, limiting profit potential.</p>
+                <p class="description"><strong>Solution:</strong> Developed high-frequency trading bots in Python interfacing with Binance and ByBit APIs, implementing complex strategies based on market indicators and technical analysis.</p>
+                <p class="description"><strong>Result:</strong> Achieved 18% annualized return over 24 months, outperforming ETH by 12% while reducing manual intervention by 90% through automated execution.</p>
+            </div>
+        </div>
+        
+        <!-- Skills -->
+        <div class="section">
+            <h2 class="section-title">Technical Arsenal</h2>
+            <div class="skills-grid">
+                <div class="skill-category primary-stack">
+                    <h4>Primary Stack</h4>
+                    <div class="skill-item">
+                        <span class="skill-name">React & JavaScript (ES6+)</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Node.js & Express</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">LLM Integration</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Vector Embeddings</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Tailwind CSS</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Server-Side Rendering</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h4>Secondary/Familiar</h4>
+                    <div class="skill-item">
+                        <span class="skill-name">Python & Flask</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Vue.js</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Ruby on Rails</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">PostgreSQL & MongoDB</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Docker</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Vercel</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="skills-grid" style="margin-top: 12px">
+                <div class="skill-category">
+                    <h4>Cloud & DevOps (MLOps)</h4>
+                    <div class="skill-item">
+                        <span class="skill-name">AWS (EC2, S3, ECS, Lambda)</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">DigitalOcean</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Docker & Containerization</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">CI/CD Pipelines (GitHub Actions)</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Infrastructure as Code</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Monitoring & Performance Optimization</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Load Balancing & Scalability</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h4>Frontend & Integration</h4>
+                    <div class="skill-item">
+                        <span class="skill-name">React & Next.js</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">TypeScript & JavaScript (ES6+)</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Vue.js</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">API Integration & SDKs</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Server-Side Rendering (SSR)</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Payment Systems (Stripe)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Education -->
+        <div class="section">
+            <h2 class="section-title">Education</h2>
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <h3 class="role">BSc in Computer Science and Management Science</h3>
+                        <p class="company">The University of Edinburgh</p>
+                    </div>
+                    <span class="period">2015 - 2019</span>
+                </div>
+                <p class="description">Comprehensive education in computer science fundamentals, software engineering principles, and business management strategies.</p>
+            </div>
+            
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <h3 class="role">High School Diploma</h3>
+                        <p class="company">Sofia High School of Mathematics</p>
+                    </div>
+                    <span class="period">2008 - 2015</span>
+                </div>
+                <p class="description">Specialized mathematics and science education with focus on advanced problem-solving and analytical thinking.</p>
+            </div>
+        </div>
+        
+        <!-- Contact -->
+        <div class="contact-info">
+            <h3>Let's Build Something Amazing Together</h3>
+            <a href="mailto:kristiyan.c@gmail.com" class="contact-item">kristiyan.c@gmail.com</a>
+            <a href="https://www.linkedin.com/in/kristiyan-ts/" class="contact-item">LinkedIn</a>
+            <a href="https://github.com/kristiyanTs/" class="contact-item">GitHub</a>
+            <a href="https://kristiyan.dev" class="contact-item">kristiyan.dev</a>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
