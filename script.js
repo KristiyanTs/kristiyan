@@ -114,7 +114,44 @@ const languages = {
         'cta.cv': 'Download CV',
         
         // Footer
-        'footer.built': 'Designed and built from scratch.'
+        'footer.built': 'Designed and built from scratch.',
+        
+        // Contact Page
+        'contact.hero.title': 'Let\'s Connect',
+        'contact.hero.subtitle': 'Ready to Build Something Amazing?',
+        'contact.hero.description': 'I\'m always excited to discuss new opportunities, whether it\'s building AI-powered SaaS solutions, consulting on technical strategy, or collaborating on innovative projects.',
+        
+        'contact.sections.getintouch.title': 'Get In Touch',
+        'contact.sections.getintouch.direct.title': 'Direct Contact',
+        'contact.sections.getintouch.direct.email.label': 'Email',
+        'contact.sections.getintouch.direct.phone.label': 'Phone',
+        'contact.sections.getintouch.networks.title': 'Professional Networks',
+        'contact.sections.getintouch.networks.linkedin.label': 'LinkedIn',
+        'contact.sections.getintouch.networks.linkedin.link': 'Connect on LinkedIn',
+        'contact.sections.getintouch.networks.github.label': 'GitHub',
+        'contact.sections.getintouch.networks.github.link': 'View Projects',
+        'contact.sections.getintouch.response.title': 'Response Time',
+        'contact.sections.getintouch.response.description': 'I typically respond to all inquiries within 24 hours during business days. For urgent matters, feel free to call directly.',
+        
+        'contact.sections.career.title': 'What I\'m Looking For',
+        'contact.sections.career.ideal.title': 'Ideal Opportunities',
+        'contact.sections.career.ideal.role1': 'Senior AI Engineer or Technical Lead roles',
+        'contact.sections.career.ideal.role2': 'Product-focused engineering teams',
+        'contact.sections.career.ideal.role3': 'AI/ML startup environments',
+        'contact.sections.career.ideal.role4': 'Remote-first companies',
+        'contact.sections.career.ideal.role5': 'Contract work and consulting',
+        'contact.sections.career.bring.title': 'What I Bring',
+        'contact.sections.career.bring.skill1': 'Proven track record of building profitable products',
+        'contact.sections.career.bring.skill2': 'Deep expertise in modern AI technologies',
+        'contact.sections.career.bring.skill3': 'Full-stack development capabilities',
+        'contact.sections.career.bring.skill4': 'Business acumen and strategic thinking',
+        'contact.sections.career.bring.skill5': '10+ years of startup experience',
+        
+        'contact.sections.cta.title': 'Ready to Start?',
+        'contact.sections.cta.description': 'Whether you have a specific project in mind or just want to explore possibilities, I\'m here to help turn your ideas into reality.',
+        'contact.sections.cta.email': 'Send Email',
+        'contact.sections.cta.call': 'Call Now',
+        'contact.sections.cta.back': 'Back to Portfolio'
     },
     bg: {
         flag: '🇧🇬',
@@ -230,7 +267,44 @@ const languages = {
         'cta.cv': 'Изтеглете CV',
         
         // Footer
-        'footer.built': 'Дизайнирано и изградено от нулата.'
+        'footer.built': 'Дизайнирано и изградено от нулата.',
+        
+        // Contact Page
+        'contact.hero.title': 'Нека се Свържем',
+        'contact.hero.subtitle': 'Готови ли сте да Изградим Нещо Удивително?',
+        'contact.hero.description': 'Винаги съм развълнуван да обсъдя нови възможности, независимо дали е изграждане на AI-powered SaaS решения, консултиране по техническа стратегия или сътрудничество по иновативни проекти.',
+        
+        'contact.sections.getintouch.title': 'Свържете се с мен',
+        'contact.sections.getintouch.direct.title': 'Директен Контакт',
+        'contact.sections.getintouch.direct.email.label': 'Имейл',
+        'contact.sections.getintouch.direct.phone.label': 'Телефон',
+        'contact.sections.getintouch.networks.title': 'Професионални Мрежи',
+        'contact.sections.getintouch.networks.linkedin.label': 'LinkedIn',
+        'contact.sections.getintouch.networks.linkedin.link': 'Свържете се в LinkedIn',
+        'contact.sections.getintouch.networks.github.label': 'GitHub',
+        'contact.sections.getintouch.networks.github.link': 'Вижте Проектите',
+        'contact.sections.getintouch.response.title': 'Време за Отговор',
+        'contact.sections.getintouch.response.description': 'Обикновено отговарям на всички запитвания в рамките на 24 часа през работните дни. За спешни въпроси, не се колебайте да се обадите директно.',
+        
+        'contact.sections.career.title': 'Какво Търся',
+        'contact.sections.career.ideal.title': 'Идеални Възможности',
+        'contact.sections.career.ideal.role1': 'Старши AI Инженер или Технически Лийд роли',
+        'contact.sections.career.ideal.role2': 'Продуктово-фокусирани инженерни екипи',
+        'contact.sections.career.ideal.role3': 'AI/ML стартъп среди',
+        'contact.sections.career.ideal.role4': 'Компании с приоритет на дистанционната работа',
+        'contact.sections.career.ideal.role5': 'Договорна работа и консултиране',
+        'contact.sections.career.bring.title': 'Какво Нося',
+        'contact.sections.career.bring.skill1': 'Доказан опит в изграждане на печеливши продукти',
+        'contact.sections.career.bring.skill2': 'Дълбок опит в модерни AI технологии',
+        'contact.sections.career.bring.skill3': 'Full-stack разработни възможности',
+        'contact.sections.career.bring.skill4': 'Бизнес проницателност и стратегическо мислене',
+        'contact.sections.career.bring.skill5': '10+ години стартъп опит',
+        
+        'contact.sections.cta.title': 'Готови ли сте да Започнем?',
+        'contact.sections.cta.description': 'Независимо дали имате конкретен проект наум или просто искате да проучите възможности, тук съм да помогна да превърнем идеите ви в реалност.',
+        'contact.sections.cta.email': 'Изпратете Имейл',
+        'contact.sections.cta.call': 'Обадете се Сега',
+        'contact.sections.cta.back': 'Обратно към Портфолиото'
     }
 };
 
