@@ -45,7 +45,7 @@
       ]
     },
     {
-      "source": "/(.*\\.(css|js|png|svg))",
+      "source": "/:file(css|js|png|svg)",
       "headers": [
         {
           "key": "Cache-Control",
