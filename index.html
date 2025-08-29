@@ -40,9 +40,14 @@
                 </div>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-4">
-                        <a href="#projects" class="nav-link text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Projects</a>
-                        <a href="#experience" class="nav-link text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Experience</a>
-                        <a href="mailto:kristiyan.c@gmail.com" class="bg-sky-500 hover:bg-sky-600 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors">Contact Me</a>
+                        <a href="#projects" class="nav-link text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" data-i18n="nav.projects">Projects</a>
+                        <a href="#experience" class="nav-link text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" data-i18n="nav.experience">Experience</a>
+                        <div id="language-switcher" class="text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center gap-2">
+                            <span id="lang-en" class="text-lg cursor-pointer hover:opacity-80 transition-opacity" data-lang="en">🇺🇸</span>
+                            <span class="text-slate-500">|</span>
+                            <span id="lang-bg" class="text-lg cursor-pointer hover:opacity-80 transition-opacity" data-lang="bg">🇧🇬</span>
+                        </div>
+                        <a href="mailto:kristiyan.c@gmail.com" class="bg-sky-500 hover:bg-sky-600 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors" data-i18n="nav.contact">Contact Me</a>
                     </div>
                 </div>
             </div>
@@ -61,9 +66,9 @@
                 </div>
                 <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight">
                     <span class="block">Kristiyan Tsvetanov</span>
-                    <span class="block gradient-text mt-2">AI Engineer & Product Builder</span>
+                    <span class="block gradient-text mt-2" data-i18n="hero.title">AI Engineer & Product Builder</span>
                 </h1>
-                <p class="mt-6 max-w-2xl mx-auto text-lg text-slate-400">
+                <p class="mt-6 max-w-2xl mx-auto text-lg text-slate-400" data-i18n="hero.description">
                     I turn complex AI problems into profitable SaaS solutions that generate real revenue - like scaling Bookwiz.io to $3K MRR in under 12 months. With 9+ years of startup experience, I specialize in building intelligent applications that solve real-world problems and generate revenue from day one.
                 </p>
                 <div class="mt-6 flex justify-center items-center gap-6 text-sm text-slate-400 social-proof-badges">
@@ -71,19 +76,19 @@
                         <svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                         </svg>
-                        <span>9+ Years Experience</span>
+                        <span data-i18n="hero.experience">9+ Years Experience</span>
                     </div>
                     <div class="flex items-center gap-2 social-proof-badge">
                         <svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                         </svg>
-                        <span>$3K MRR Achieved</span>
+                        <span data-i18n="hero.mrr">$3K MRR Achieved</span>
                     </div>
                     <div class="flex items-center gap-2 social-proof-badge">
                         <svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                         </svg>
-                        <span>95% Client Retention</span>
+                        <span data-i18n="hero.retention">95% Client Retention</span>
                     </div>
                 </div>
                 <div class="mt-8 flex justify-center items-center gap-4">
@@ -99,15 +104,15 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div class="text-center achievement-metric">
                     <div class="text-3xl font-bold text-sky-400 mb-2">$3K</div>
-                    <div class="text-slate-400">Monthly Recurring Revenue</div>
+                    <div class="text-slate-400" data-i18n="achievements.mrr">Monthly Recurring Revenue</div>
                 </div>
                 <div class="text-center achievement-metric">
                     <div class="text-3xl font-bold text-sky-400 mb-2">15+</div>
-                    <div class="text-slate-400">Client Projects Delivered</div>
+                    <div class="text-slate-400" data-i18n="achievements.projects">Client Projects Delivered</div>
                 </div>
                 <div class="text-center achievement-metric">
                     <div class="text-3xl font-bold text-sky-400 mb-2">9+</div>
-                    <div class="text-slate-400">Years of Experience</div>
+                    <div class="text-slate-400" data-i18n="achievements.years">Years of Experience</div>
                 </div>
             </div>
         </section>
@@ -118,12 +123,12 @@
             <!-- Toolkit Section -->
             <section class="py-16 section-fade-in">
                 <div class="text-center">
-                    <h2 class="text-3xl font-bold text-slate-100">My Toolkit</h2>
-                    <p class="mt-4 max-w-2xl mx-auto text-lg text-slate-400">A selection of technologies I use to build high-quality software.</p>
+                    <h2 class="text-3xl font-bold text-slate-100" data-i18n="toolkit.title">My Toolkit</h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-lg text-slate-400" data-i18n="toolkit.subtitle">A selection of technologies I use to build high-quality software.</p>
                 </div>
                 <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 text-slate-400 toolkit-grid">
                     <div class="primary-stack">
-                        <h4 class="font-semibold text-white mb-4 text-lg">Primary Stack</h4>
+                        <h4 class="font-semibold text-white mb-4 text-lg" data-i18n="toolkit.primary">Primary Stack</h4>
                         <div class="space-y-2">
                             <div class="toolkit-item">
                                 <span class="toolkit-icon"></span>
@@ -152,7 +157,7 @@
                         </div>
                     </div>
                     <div class="secondary-stack">
-                        <h4 class="font-semibold text-white mb-4 text-lg">Secondary/Familiar</h4>
+                        <h4 class="font-semibold text-white mb-4 text-lg" data-i18n="toolkit.secondary">Secondary/Familiar</h4>
                         <div class="space-y-2">
                             <div class="toolkit-item">
                                 <span class="toolkit-icon"></span>
@@ -185,19 +190,19 @@
 
             <!-- Projects Section -->
             <section id="projects" class="py-24 section-fade-in">
-                <h2 class="text-3xl font-bold text-slate-100 mb-10">Featured Projects</h2>
+                <h2 class="text-3xl font-bold text-slate-100 mb-10" data-i18n="projects.title">Featured Projects</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div class="card rounded-lg p-6 md:col-span-2">
                         <div class="flex items-start justify-between mb-4">
                             <h3 class="text-xl font-bold text-white">Bookwiz.io - AI Writing Platform</h3>
                             <span class="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm font-medium">$3K MRR</span>
                         </div>
-                        <p class="mt-2 text-slate-400"><strong>Problem:</strong> Authors struggled with writer's block and needed intelligent assistance to improve their writing quality and productivity.</p>
-                        <p class="mt-2 text-slate-400"><strong>Solution:</strong> Built an agentic AI writing assistant using LLMs and vector embeddings for context-aware suggestions, with a complete SaaS platform including payments and SEO optimization.</p>
-                        <p class="mt-2 text-slate-400"><strong>Result:</strong> Scaled to $3,000 MRR, serving hundreds of authors with a Node.js backend, React frontend, Stripe integration, and server-side rendering for maximum visibility. <strong>Achieved 99.9% uptime with 200ms average response time.</strong> <strong>Platform now serves 55,000+ registered users worldwide.</strong></p>
+                        <p class="mt-2 text-slate-400"><strong data-i18n="projects.problem">Problem:</strong> <span data-i18n="projects.bookwiz.problem">Authors struggled with writer's block and needed intelligent assistance to improve their writing quality and productivity.</span></p>
+                        <p class="mt-2 text-slate-400"><strong data-i18n="projects.solution">Solution:</strong> <span data-i18n="projects.bookwiz.solution">Built an agentic AI writing assistant using LLMs and vector embeddings for context-aware suggestions, with a complete SaaS platform including payments and SEO optimization.</span></p>
+                        <p class="mt-2 text-slate-400"><strong data-i18n="projects.result">Result:</strong> <span data-i18n="projects.bookwiz.result">Scaled to $3,000 MRR, serving hundreds of authors with a Node.js backend, React frontend, Stripe integration, and server-side rendering for maximum visibility. <strong>Achieved 99.9% uptime with 200ms average response time.</strong> <strong>Platform now serves 55,000+ registered users worldwide.</strong></span></p>
                         <div class="mt-4 flex items-center gap-4">
-                            <a href="https://bookwiz.io" target="_blank" rel="noopener noreferrer" class="text-sky-400 font-medium hover:text-sky-300">Visit Project &rarr;</a>
-                            <a href="https://gitfront.io/r/KristiyanTs/5j4JaUk1B74j/bookwiz.io/" target="_blank" rel="noopener noreferrer" class="text-slate-400 font-medium hover:text-slate-300">View Source &rarr;</a>
+                            <a href="https://bookwiz.io" target="_blank" rel="noopener noreferrer" class="text-sky-400 font-medium hover:text-sky-300" data-i18n="projects.visit">Visit Project &rarr;</a>
+                            <a href="https://gitfront.io/r/KristiyanTs/5j4JaUk1B74j/bookwiz.io/" target="_blank" rel="noopener noreferrer" class="text-slate-400 font-medium hover:text-slate-300" data-i18n="projects.source">View Source &rarr;</a>
                             <span class="text-slate-500 text-sm">React • Node.js • LLM Integration • Stripe • SEO</span>
                         </div>
                     </div>
@@ -206,57 +211,57 @@
                         <div class="flex items-start justify-between mb-4">
                             <h3 class="text-xl font-bold text-white">Vkashti.bar - Complete Bar Ecosystem</h3>
                         </div>
-                        <p class="mt-2 text-slate-400"><strong>Problem:</strong> Sofia bar needed a complete digital solution for reservations, event management, staff coordination, inventory tracking, and interactive quiz nights.</p>
-                        <p class="mt-2 text-slate-400"><strong>Solution:</strong> Developed a comprehensive web platform with customer reservation system, admin dashboard for staff management, and AI-powered Discord bots for automated task management and inventory tracking using natural language processing.</p>
-                        <p class="mt-2 text-slate-400"><strong>Result:</strong> Streamlined bar operations with automated SMS confirmations, intelligent task delegation, AI-driven inventory management, and engaging quiz nights that increased operational efficiency and customer satisfaction.</p>
+                        <p class="mt-2 text-slate-400"><strong data-i18n="projects.problem">Problem:</strong> <span data-i18n="projects.vkashti.problem">Sofia bar needed a complete digital solution for reservations, event management, staff coordination, inventory tracking, and interactive quiz nights.</span></p>
+                        <p class="mt-2 text-slate-400"><strong data-i18n="projects.solution">Solution:</strong> <span data-i18n="projects.vkashti.solution">Developed a comprehensive web platform with customer reservation system, admin dashboard for staff management, and AI-powered Discord bots for automated task management and inventory tracking using natural language processing.</span></p>
+                        <p class="mt-2 text-slate-400"><strong data-i18n="projects.result">Result:</strong> <span data-i18n="projects.vkashti.result">Streamlined bar operations with automated SMS confirmations, intelligent task delegation, AI-driven inventory management, and engaging quiz nights that increased operational efficiency and customer satisfaction.</span></p>
                         <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
                             <div class="space-y-2">
                                 <div class="flex items-center gap-2 text-green-400">
                                     <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-                                    <span>QR code quiz system with real-time scoring</span>
+                                    <span data-i18n="projects.vkashti.feature1">QR code quiz system with real-time scoring</span>
                                 </div>
                                 <div class="flex items-center gap-2 text-green-400">
                                     <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-                                    <span>Reservation system with SMS confirmations</span>
+                                    <span data-i18n="projects.vkashti.feature2">Reservation system with SMS confirmations</span>
                                 </div>
                                 <div class="flex items-center gap-2 text-green-400">
                                     <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-                                    <span>AI-powered Discord bots for task management</span>
+                                    <span data-i18n="projects.vkashti.feature3">AI-powered Discord bots for task management</span>
                                 </div>
                             </div>
                             <div class="space-y-2">
                                 <div class="flex items-center gap-2 text-green-400">
                                     <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-                                    <span>Automated staff task delegation by shifts</span>
+                                    <span data-i18n="projects.vkashti.feature4">Automated staff task delegation by shifts</span>
                                 </div>
                                 <div class="flex items-center gap-2 text-green-400">
                                     <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-                                    <span>Natural language inventory management</span>
+                                    <span data-i18n="projects.vkashti.feature5">Natural language inventory management</span>
                                 </div>
                                 <div class="flex items-center gap-2 text-green-400">
                                     <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-                                    <span>Admin dashboard for complete bar operations</span>
+                                    <span data-i18n="projects.vkashti.feature6">Admin dashboard for complete bar operations</span>
                                 </div>
                             </div>
                         </div>
                         <div class="mt-4 flex items-center gap-4">
-                            <a href="https://gitfront.io/r/KristiyanTs/6NZW9HfdMA1v/vkashti/" target="_blank" rel="noopener noreferrer" class="text-sky-400 font-medium hover:text-sky-300">Main Platform &rarr;</a>
-                            <a href="https://gitfront.io/r/KristiyanTs/7A8F7R2QdwG9/vkashti-bots/" target="_blank" rel="noopener noreferrer" class="text-slate-400 font-medium hover:text-slate-300">Discord Bots &rarr;</a>
+                            <a href="https://gitfront.io/r/KristiyanTs/6NZW9HfdMA1v/vkashti/" target="_blank" rel="noopener noreferrer" class="text-sky-400 font-medium hover:text-sky-300" data-i18n="projects.main">Main Platform &rarr;</a>
+                            <a href="https://gitfront.io/r/KristiyanTs/7A8F7R2QdwG9/vkashti-bots/" target="_blank" rel="noopener noreferrer" class="text-slate-400 font-medium hover:text-slate-300" data-i18n="projects.discord">Discord Bots &rarr;</a>
                             <span class="text-slate-500 text-sm">Next.js • Discord API • AI/NLP • SMS Integration • PostgreSQL</span>
                         </div>
                     </div>
                     <div class="card rounded-lg p-6">
-                        <h3 class="text-xl font-bold text-white">Automated Trading Bots</h3>
-                        <p class="mt-2 text-slate-400"><strong>Problem:</strong> Manual trading was time-consuming and prone to emotional decisions, limiting profit potential.</p>
-                        <p class="mt-2 text-slate-400"><strong>Solution:</strong> Developed high-frequency trading bots in Python interfacing with Binance and ByBit APIs, implementing complex strategies based on market indicators and technical analysis.</p>
-                        <p class="mt-2 text-slate-400"><strong>Result:</strong> Achieved 18% annualized return over 24 months, outperforming ETH by 12% while reducing manual intervention by 90% through automated execution. <strong>Implemented risk management protocols for sustainable trading.</strong></p>
+                        <h3 class="text-xl font-bold text-white" data-i18n="projects.trading.title">Automated Trading Bots</h3>
+                        <p class="mt-2 text-slate-400"><strong data-i18n="projects.problem">Problem:</strong> <span data-i18n="projects.trading.problem">Manual trading was time-consuming and prone to emotional decisions, limiting profit potential.</span></p>
+                        <p class="mt-2 text-slate-400"><strong data-i18n="projects.solution">Solution:</strong> <span data-i18n="projects.trading.solution">Developed high-frequency trading bots in Python interfacing with Binance and ByBit APIs, implementing complex strategies based on market indicators and technical analysis.</span></p>
+                        <p class="mt-2 text-slate-400"><strong data-i18n="projects.result">Result:</strong> <span data-i18n="projects.trading.result">Achieved 18% annualized return over 24 months, outperforming ETH by 12% while reducing manual intervention by 90% through automated execution. <strong>Implemented risk management protocols for sustainable trading.</strong></span></p>
                         <span class="text-slate-500 text-sm">Python • Trading APIs • Algorithmic Trading • Market Analysis</span>
                     </div>
                     <div class="card rounded-lg p-6">
-                        <h3 class="text-xl font-bold text-white">Custom CMS Systems</h3>
-                        <p class="mt-2 text-slate-400"><strong>Problem:</strong> Clients needed flexible content management without the bloat and limitations of off-the-shelf solutions.</p>
-                        <p class="mt-2 text-slate-400"><strong>Solution:</strong> Designed and built bespoke CMS systems tailored to specific business needs, enabling efficient content, user data, and business logic management.</p>
-                        <p class="mt-2 text-slate-400"><strong>Result:</strong> Delivered 5+ custom CMS solutions, each reducing content management time by 60% and improving client workflow efficiency. <strong>Average project completion: 6 weeks with 95% client retention rate.</strong></p>
+                        <h3 class="text-xl font-bold text-white" data-i18n="projects.cms.title">Custom CMS Systems</h3>
+                        <p class="mt-2 text-slate-400"><strong data-i18n="projects.problem">Problem:</strong> <span data-i18n="projects.cms.problem">Clients needed flexible content management without the bloat and limitations of off-the-shelf solutions.</span></p>
+                        <p class="mt-2 text-slate-400"><strong data-i18n="projects.solution">Solution:</strong> <span data-i18n="projects.cms.solution">Designed and built bespoke CMS systems tailored to specific business needs, enabling efficient content, user data, and business logic management.</span></p>
+                        <p class="mt-2 text-slate-400"><strong data-i18n="projects.result">Result:</strong> <span data-i18n="projects.cms.result">Delivered 5+ custom CMS solutions, each reducing content management time by 60% and improving client workflow efficiency. <strong>Average project completion: 6 weeks with 95% client retention rate.</strong></span></p>
                         <span class="text-slate-500 text-sm">Custom Development • User Experience • Business Logic • Scalability</span>
                     </div>
                 </div>
@@ -264,22 +269,22 @@
 
             <!-- Experience Section -->
             <section id="experience" class="py-24 section-fade-in">
-                <h2 class="text-3xl font-bold text-slate-100 mb-12">Career Journey</h2>
+                <h2 class="text-3xl font-bold text-slate-100 mb-12" data-i18n="experience.title">Career Journey</h2>
                 <div class="relative border-l-2 border-slate-700 pl-10 space-y-12">
                     <div class="timeline-item">
                         <p class="text-sm text-slate-500">2016 - Present</p>
-                        <h4 class="font-semibold text-white">Founder & Lead Developer @ Moonhythe</h4>
-                        <p class="mt-1 text-slate-400">Built and scaled multiple SaaS products to profitability, including Bookwiz.io ($3K MRR). Delivered 15+ client projects with 95% client retention rate. Specialized in AI integration and full-stack development.</p>
+                        <h4 class="font-semibold text-white" data-i18n="experience.moonhythe.title">Founder & Lead Developer @ Moonhythe</h4>
+                        <p class="mt-1 text-slate-400" data-i18n="experience.moonhythe.description">Built and scaled multiple SaaS products to profitability, including Bookwiz.io ($3K MRR). Delivered 15+ client projects with 95% client retention rate. Specialized in AI integration and full-stack development.</p>
                     </div>
                     <div class="timeline-item">
                         <p class="text-sm text-slate-500">2019 - 2021</p>
-                        <h4 class="font-semibold text-white">Lead Frontend Developer @ ResearchSpace</h4>
-                        <p class="mt-1 text-slate-400">Led frontend development for new product launches and modernized core application from jQuery to React, improving performance by 40% and reducing maintenance overhead by 60%.</p>
+                        <h4 class="font-semibold text-white" data-i18n="experience.researchspace.title">Lead Frontend Developer @ ResearchSpace</h4>
+                        <p class="mt-1 text-slate-400" data-i18n="experience.researchspace.description">Led frontend development for new product launches and modernized core application from jQuery to React, improving performance by 40% and reducing maintenance overhead by 60%.</p>
                     </div>
                     <div class="timeline-item">
                         <p class="text-sm text-slate-500">2019 - 2021</p>
-                        <h4 class="font-semibold text-white">Co-Founder & CTO @ BgMentor</h4>
-                        <p class="mt-1 text-slate-400">Led technical strategy and platform development using Ruby on Rails and Vue.js. Built scalable architecture supporting 10,000+ users and managed team of 3 developers.</p>
+                        <h4 class="font-semibold text-white" data-i18n="experience.bgmentor.title">Co-Founder & CTO @ BgMentor</h4>
+                        <p class="mt-1 text-slate-400" data-i18n="experience.bgmentor.description">Led technical strategy and platform development using Ruby on Rails and Vue.js. Built scalable architecture supporting 10,000+ users and managed team of 3 developers.</p>
                     </div>
                 </div>
             </section>
@@ -287,8 +292,8 @@
             <!-- Testimonials Section -->
             <section class="py-24 section-fade-in">
                 <div class="text-center mb-12">
-                    <h2 class="text-3xl font-bold text-slate-100">What Clients Say</h2>
-                    <p class="mt-4 max-w-2xl mx-auto text-lg text-slate-400">Real feedback from projects I've delivered.</p>
+                    <h2 class="text-3xl font-bold text-slate-100" data-i18n="testimonials.title">What Clients Say</h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-lg text-slate-400" data-i18n="testimonials.subtitle">Real feedback from projects I've delivered.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div class="card p-6 rounded-lg">
@@ -297,11 +302,11 @@
                                 <span class="text-sky-400 font-bold text-lg">A</span>
                             </div>
                             <div>
-                                <h4 class="font-semibold text-white">Anonymous Client</h4>
-                                <p class="text-slate-400 text-sm">SaaS Platform Development</p>
+                                <h4 class="font-semibold text-white" data-i18n="testimonials.client1.name">Anonymous Client</h4>
+                                <p class="text-slate-400 text-sm" data-i18n="testimonials.client1.role">SaaS Platform Development</p>
                             </div>
                         </div>
-                        <p class="text-slate-300 italic">"Kristiyan delivered our AI-powered platform ahead of schedule. His technical expertise and ability to translate complex requirements into elegant solutions exceeded our expectations."</p>
+                        <p class="text-slate-300 italic" data-i18n="testimonials.client1.quote">"Kristiyan delivered our AI-powered platform ahead of schedule. His technical expertise and ability to translate complex requirements into elegant solutions exceeded our expectations."</p>
                     </div>
                     <div class="card p-6 rounded-lg">
                         <div class="flex items-center mb-4">
@@ -309,18 +314,18 @@
                                 <span class="text-sky-400 font-bold text-lg">S</span>
                             </div>
                             <div>
-                                <h4 class="font-semibold text-white">Startup Founder</h4>
-                                <p class="text-slate-400 text-sm">Custom CMS System</p>
+                                <h4 class="font-semibold text-white" data-i18n="testimonials.client2.name">Startup Founder</h4>
+                                <p class="text-slate-400 text-sm" data-i18n="testimonials.client2.role">Custom CMS System</p>
                             </div>
                         </div>
-                        <p class="text-slate-300 italic">"Working with Kristiyan was a game-changer. He built a custom CMS that perfectly fits our workflow, and the AI integration he implemented has saved us hours every week."</p>
+                        <p class="text-slate-300 italic" data-i18n="testimonials.client2.quote">"Working with Kristiyan was a game-changer. He built a custom CMS that perfectly fits our workflow, and the AI integration he implemented has saved us hours every week."</p>
                     </div>
                 </div>
             </section>
             
             <!-- Education Section -->
             <section class="py-24 section-fade-in">
-                <h2 class="text-3xl font-bold text-slate-100 mb-12">Education</h2>
+                <h2 class="text-3xl font-bold text-slate-100 mb-12" data-i18n="education.title">Education</h2>
                 <div class="space-y-6">
                     <div class="card rounded-lg p-8">
                         <div class="grid grid-cols-1 md:grid-cols-4 items-center">
@@ -328,9 +333,9 @@
                                 <span class="text-sm text-slate-500">2015 - 2019</span>
                             </div>
                             <div class="md:col-span-3 mt-4 md:mt-0">
-                                <h4 class="text-lg font-semibold text-slate-200">BSc in Computer Science and Management Science</h4>
-                                <p class="text-sky-400 font-medium">The University of Edinburgh</p>
-                                <p class="text-slate-400 mt-1">Comprehensive education in computer science fundamentals, software engineering principles, and business management strategies.</p>
+                                <h4 class="text-lg font-semibold text-slate-200" data-i18n="education.degree.title">BSc in Computer Science and Management Science</h4>
+                                <p class="text-sky-400 font-medium" data-i18n="education.degree.school">The University of Edinburgh</p>
+                                <p class="text-slate-400 mt-1" data-i18n="education.degree.description">Comprehensive education in computer science fundamentals, software engineering principles, and business management strategies.</p>
                             </div>
                         </div>
                     </div>
@@ -341,9 +346,9 @@
                                 <span class="text-sm text-slate-500">2008 - 2015</span>
                             </div>
                             <div class="md:col-span-3 mt-4 md:mt-0">
-                                <h4 class="text-lg font-semibold text-slate-200">High School Diploma</h4>
-                                <p class="text-sky-400 font-medium">Sofia High School of Mathematics</p>
-                                <p class="text-slate-400 mt-1">Specialized mathematics and science education with focus on advanced problem-solving and analytical thinking.</p>
+                                <h4 class="text-lg font-semibold text-slate-200" data-i18n="education.highschool.title">High School Diploma</h4>
+                                <p class="text-sky-400 font-medium" data-i18n="education.highschool.school">Sofia High School of Mathematics</p>
+                                <p class="text-slate-400 mt-1" data-i18n="education.highschool.description">Specialized mathematics and science education with focus on advanced problem-solving and analytical thinking.</p>
                             </div>
                         </div>
                     </div>
@@ -353,24 +358,24 @@
             <!-- What I'm Looking For Section -->
             <section class="py-24 section-fade-in">
                 <div class="card rounded-lg p-8 career-goals-card">
-                    <h3 class="text-2xl font-bold text-white mb-6">What I'm Looking For</h3>
+                    <h3 class="text-2xl font-bold text-white mb-6" data-i18n="career.title">What I'm Looking For</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <div>
-                            <h4 class="text-lg font-semibold text-slate-200 mb-3">Ideal Role</h4>
+                            <h4 class="text-lg font-semibold text-slate-200 mb-3" data-i18n="career.ideal.title">Ideal Role</h4>
                             <ul class="text-slate-400 space-y-2">
-                                <li>• Senior AI Engineer or Technical Lead</li>
-                                <li>• Product-focused engineering teams</li>
-                                <li>• AI/ML startup environments</li>
-                                <li>• Remote-first companies</li>
+                                <li>• <span data-i18n="career.ideal.role1">Senior AI Engineer or Technical Lead</span></li>
+                                <li>• <span data-i18n="career.ideal.role2">Product-focused engineering teams</span></li>
+                                <li>• <span data-i18n="career.ideal.role3">AI/ML startup environments</span></li>
+                                <li>• <span data-i18n="career.ideal.role4">Remote-first companies</span></li>
                             </ul>
                         </div>
                         <div>
-                            <h4 class="text-lg font-semibold text-slate-200 mb-3">What I Bring</h4>
+                            <h4 class="text-lg font-semibold text-slate-200 mb-3" data-i18n="career.bring.title">What I Bring</h4>
                             <ul class="text-slate-400 space-y-2">
-                                <li>• Proven track record of building profitable products</li>
-                                <li>• Deep expertise in modern AI technologies</li>
-                                <li>• Full-stack development capabilities</li>
-                                <li>• Business acumen and strategic thinking</li>
+                                <li>• <span data-i18n="career.bring.skill1">Proven track record of building profitable products</span></li>
+                                <li>• <span data-i18n="career.bring.skill2">Deep expertise in modern AI technologies</span></li>
+                                <li>• <span data-i18n="career.bring.skill3">Full-stack development capabilities</span></li>
+                                <li>• <span data-i18n="career.bring.skill4">Business acumen and strategic thinking</span></li>
                             </ul>
                         </div>
                     </div>
@@ -379,10 +384,10 @@
 
             <!-- CTA Section -->
             <section class="py-24 text-center section-fade-in">
-                <h2 class="text-3xl font-bold text-white">Have a project in mind?</h2>
-                <p class="mt-4 max-w-2xl mx-auto text-lg text-slate-400">I'm currently available for remote contract work and select full-time opportunities. Let's build something great together.</p>
+                <h2 class="text-3xl font-bold text-white" data-i18n="cta.title">Have a project in mind?</h2>
+                <p class="mt-4 max-w-2xl mx-auto text-lg text-slate-400" data-i18n="cta.subtitle">I'm currently available for remote contract work and select full-time opportunities. Let's build something great together.</p>
                 <div class="mt-6 max-w-2xl mx-auto text-slate-400">
-                    <p class="mb-4">I specialize in:</p>
+                    <p class="mb-4" data-i18n="cta.specialize">I specialize in:</p>
                     <div class="flex flex-wrap justify-center gap-3 text-sm">
                         <span class="skill-tag bg-slate-800 px-3 py-1 rounded-full">AI/LLM Integration</span>
                         <span class="skill-tag bg-slate-800 px-3 py-1 rounded-full">SaaS Development</span>
@@ -391,16 +396,16 @@
                     </div>
                 </div>
                 <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center cta-buttons">
-                    <a href="mailto:kristiyan.c@gmail.com" class="btn-primary bg-sky-500 hover:bg-sky-600 text-white font-medium px-8 py-3 rounded-md transition-colors">Get in Touch</a>
-                    <a href="#projects" class="border border-slate-600 text-slate-300 hover:text-white hover:border-slate-500 font-medium px-8 py-3 rounded-md transition-colors">View My Work</a>
-                    <a href="./kristiyan-tsvetanov-cv.pdf" download class="border border-slate-600 text-slate-300 hover:text-white hover:border-slate-500 font-medium px-8 py-3 rounded-md transition-colors">Download CV</a>
+                    <a href="mailto:kristiyan.c@gmail.com" class="btn-primary bg-sky-500 hover:bg-sky-600 text-white font-medium px-8 py-3 rounded-md transition-colors" data-i18n="cta.contact">Get in Touch</a>
+                    <a href="#projects" class="border border-slate-600 text-slate-300 hover:text-white hover:border-slate-500 font-medium px-8 py-3 rounded-md transition-colors" data-i18n="cta.work">View My Work</a>
+                    <a href="./kristiyan-tsvetanov-cv.pdf" download class="border border-slate-600 text-slate-300 hover:text-white hover:border-slate-500 font-medium px-8 py-3 rounded-md transition-colors" data-i18n="cta.cv">Download CV</a>
                 </div>
             </section>
 
         </main>
 
         <footer class="text-center py-16 text-slate-500 text-sm">
-            <p>&copy; <span id="year"></span> Kristiyan Tsvetanov. Designed and built from scratch.</p>
+            <p>&copy; <span id="year"></span> Kristiyan Tsvetanov. <span data-i18n="footer.built">Designed and built from scratch.</span></p>
         </footer>
 
     </div>

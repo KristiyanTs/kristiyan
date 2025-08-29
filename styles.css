@@ -84,6 +84,29 @@ body {
     width: 100%;
 }
 
+/* Language switcher styles */
+#language-switcher {
+    position: relative;
+}
+
+#language-switcher span[data-lang] {
+    transition: all 0.3s ease;
+}
+
+#language-switcher span[data-lang]:hover {
+    transform: scale(1.05);
+}
+
+#language-switcher span[data-lang].opacity-100 {
+    opacity: 1;
+    color: #ffffff;
+}
+
+#language-switcher span[data-lang].opacity-60 {
+    opacity: 0.6;
+    color: #94a3b8;
+}
+
 .timeline-item::before {
     content: '';
     position: absolute;
