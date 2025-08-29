@@ -1,51 +1,25 @@
 {
   "version": 2,
-  "builds": [
+  "rewrites": [
     {
-      "src": "*.html",
-      "use": "@vercel/static"
+      "source": "/",
+      "destination": "/index.html"
     },
     {
-      "src": "*.css",
-      "use": "@vercel/static"
+      "source": "/contacts",
+      "destination": "/contacts.html"
     },
     {
-      "src": "*.js",
-      "use": "@vercel/static"
+      "source": "/cv",
+      "destination": "/cv.html"
     },
     {
-      "src": "*.png",
-      "use": "@vercel/static"
+      "source": "/cv-ai-version",
+      "destination": "/cv-ai-version.html"
     },
     {
-      "src": "*.svg",
-      "use": "@vercel/static"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/",
-      "dest": "/index.html"
-    },
-    {
-      "src": "/contacts",
-      "dest": "/contacts.html"
-    },
-    {
-      "src": "/cv",
-      "dest": "/cv.html"
-    },
-    {
-      "src": "/cv-ai-version",
-      "dest": "/cv-ai-version.html"
-    },
-    {
-      "src": "/cv-frontend-version",
-      "dest": "/cv-frontend-version.html"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
+      "source": "/cv-frontend-version",
+      "destination": "/cv-frontend-version.html"
     }
   ],
   "headers": [
@@ -79,5 +53,7 @@
         }
       ]
     }
-  ]
+  ],
+  "cleanUrls": true,
+  "trailingSlash": false
 }
