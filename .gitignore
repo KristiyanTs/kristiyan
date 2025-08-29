@@ -13,6 +13,7 @@ out/
 .next/
 .nuxt/
 .vuepress/dist/
+.vercel/
 
 # Environment variables
 .env

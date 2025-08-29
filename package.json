@@ -1,0 +1,26 @@
+{
+  "name": "kristiyan-portfolio",
+  "version": "1.0.0",
+  "description": "Kristiyan Tsvetanov's AI Engineer & Product Builder Portfolio",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "echo 'Static site - no build step required'",
+    "start": "npx serve ."
+  },
+  "keywords": [
+    "portfolio",
+    "ai-engineer",
+    "product-builder",
+    "saas",
+    "fullstack"
+  ],
+  "author": "Kristiyan Tsvetanov",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
