@@ -226,7 +226,7 @@ const languages = {
         // AI War Zone project
         'projects.aiwarzone.problem': 'Стандартните AI бенчмаркове тестват способностите, но игнорират характера. Това оставя бизнесите да гадаят за надеждността, достоверността и стратегическите недостатъци на модела в реални сценарии.',
         'projects.aiwarzone.solution': 'Изградих платформа с пълен стек, която принуждава водещите LLM-и (от Google, OpenAI, Anthropic) в класическата Дилема на Затворника, създавайки нов бенчмарк за тяхното възникващо стратегическо поведение и "характер".',
-        'projects.aiwarzone.result': 'Разкрих уникални характерни профили за основните AI модели, създавайки вирален проект, който демонстрира дълбок експерт в мулти-LLM интеграция, поведенчески анализ и изграждане на продукти със силен разказ.',
+        'projects.aiwarzone.result': 'Открих уникални поведенчески модели в основните AI системи, създавайки популярен проект, който показва дълбокия ми опит в мулти-LLM интеграция, поведенчески анализ и изграждане на продукти със силна история.',
         
         // CMS project
         'projects.cms.title': 'Персонализирани CMS Системи',
@@ -450,6 +450,106 @@ function setupLanguageSwitcher() {
 
 // Set current year in footer
 document.getElementById('year').textContent = new Date().getFullYear();
+
+// BookWiz Slideshow functionality
+let currentSlideIndex = 0;
+const totalSlides = 3;
+
+// Arena Slideshow functionality
+let currentArenaSlideIndex = 0;
+const totalArenaSlides = 2;
+
+function showSlide(n) {
+    const slides = document.querySelectorAll('.bookwiz-slideshow .slide');
+    const dots = document.querySelectorAll('.bookwiz-slideshow .dot');
+    
+    // Remove active class from all slides and dots
+    slides.forEach(slide => slide.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
+    
+    // Calculate the correct slide index
+    if (n >= totalSlides) {
+        currentSlideIndex = 0;
+    } else if (n < 0) {
+        currentSlideIndex = totalSlides - 1;
+    } else {
+        currentSlideIndex = n;
+    }
+    
+    // Add active class to current slide and dot
+    if (slides[currentSlideIndex]) {
+        slides[currentSlideIndex].classList.add('active');
+    }
+    if (dots[currentSlideIndex]) {
+        dots[currentSlideIndex].classList.add('active');
+    }
+}
+
+function changeSlide(direction) {
+    showSlide(currentSlideIndex + direction);
+}
+
+function currentSlide(n) {
+    showSlide(n - 1);
+}
+
+// Auto-advance slideshow every 5 seconds
+function autoAdvance() {
+    changeSlide(1);
+}
+
+// Arena slideshow functions
+function showArenaSlide(n) {
+    const slides = document.querySelectorAll('.arena-slideshow .slide');
+    const dots = document.querySelectorAll('.arena-slideshow .dot');
+    
+    // Remove active class from all slides and dots
+    slides.forEach(slide => slide.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
+    
+    // Calculate the correct slide index
+    if (n >= totalArenaSlides) {
+        currentArenaSlideIndex = 0;
+    } else if (n < 0) {
+        currentArenaSlideIndex = totalArenaSlides - 1;
+    } else {
+        currentArenaSlideIndex = n;
+    }
+    
+    // Add active class to current slide and dot
+    if (slides[currentArenaSlideIndex]) {
+        slides[currentArenaSlideIndex].classList.add('active');
+    }
+    if (dots[currentArenaSlideIndex]) {
+        dots[currentArenaSlideIndex].classList.add('active');
+    }
+}
+
+function changeArenaSlide(direction) {
+    showArenaSlide(currentArenaSlideIndex + direction);
+}
+
+function currentArenaSlide(n) {
+    showArenaSlide(n - 1);
+}
+
+// Auto-advance Arena slideshow every 5 seconds
+function autoAdvanceArena() {
+    changeArenaSlide(1);
+}
+
+// Initialize slideshow when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize the first slide for BookWiz
+    showSlide(0);
+    
+    // Initialize the first slide for Arena
+    showArenaSlide(0);
+    
+    // Set up auto-advance for both slideshows
+    setInterval(autoAdvance, 5000);
+    setInterval(autoAdvanceArena, 5000);
+});
 
 // Intersection Observer for fade-in animations
 const observer = new IntersectionObserver((entries) => {

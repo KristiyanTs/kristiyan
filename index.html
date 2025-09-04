@@ -274,12 +274,24 @@
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <!-- Image Container -->
                         <div class="project-image-container">
-                            <div class="project-image-placeholder">
-                                <div class="flex items-center justify-center h-full">
-                                    <div class="text-center">
-                                        <div class="text-4xl mb-4">🧠⚔️</div>
-                                        <div class="text-slate-400 text-sm">AI Character Cards Preview</div>
+                            <div class="arena-slideshow relative">
+                                <div class="slideshow-container">
+                                    <div class="slide active">
+                                        <img src="arena1.png" alt="Arena Platform Interface" class="w-full h-auto rounded-lg shadow-lg border border-slate-700">
                                     </div>
+                                    <div class="slide">
+                                        <img src="arena2.png" alt="Arena Features Dashboard" class="w-full h-auto rounded-lg shadow-lg border border-slate-700">
+                                    </div>
+                                </div>
+                                
+                                <!-- Navigation arrows -->
+                                <button class="slideshow-prev" onclick="changeArenaSlide(-1)">❮</button>
+                                <button class="slideshow-next" onclick="changeArenaSlide(1)">❯</button>
+                                
+                                <!-- Dots indicator -->
+                                <div class="slideshow-dots">
+                                    <span class="dot active" onclick="currentArenaSlide(1)"></span>
+                                    <span class="dot" onclick="currentArenaSlide(2)"></span>
                                 </div>
                             </div>
                         </div>
@@ -288,23 +300,23 @@
                         <div class="project-content">
                             <div class="flex items-start justify-between mb-6">
                                 <h3 class="text-2xl font-bold text-white">AI Behavior & Strategy Benchmark</h3>
-                                <span class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-sm font-medium ml-4">Viral Project</span>
+                                <span class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-sm font-medium ml-4">Viral</span>
                             </div>
                             
                             <div class="space-y-4">
                                 <p class="text-slate-400">
-                                    <span class="text-red-400 font-bold uppercase tracking-wide">PROBLEM:</span> 
+                                    <span class="text-slate-300 font-medium">Problem:</span> 
                                     <span data-i18n="projects.aiwarzone.problem">Businesses are choosing multi-million dollar AI models based on incomplete data. They test for capability but are blind to a model's character—its trustworthiness, strategic flaws, and potential for ruthless or naive behavior.</span>
                                 </p>
                                 
                                 <p class="text-slate-400">
-                                    <span class="text-blue-400 font-bold uppercase tracking-wide">MY SOLUTION:</span> 
+                                    <span class="text-slate-300 font-medium">Solution:</span> 
                                     <span data-i18n="projects.aiwarzone.solution">I built a full-stack platform that forces top LLMs into the Prisoner's Dilemma, creating the first public benchmark for their emergent strategic behavior.</span>
                                 </p>
                                 
                                 <div class="text-slate-400">
                                     <strong class="text-white text-lg block mb-2" data-i18n="projects.aiwarzone.headline">🎯 Sparked viral discussion across AI communities.</strong>
-                                    <span class="text-green-400 font-bold uppercase tracking-wide">THE RESULT:</span> 
+                                    <span class="text-slate-300 font-medium">Result:</span> 
                                     <span data-i18n="projects.aiwarzone.result">Revealed unique "personality" flaws in major AI models, creating a viral project cited by AI enthusiasts and demonstrating deep expertise in multi-LLM integration and behavioral analysis.</span>
                         </div>
                     </div>
@@ -330,18 +342,18 @@
                             
                             <div class="space-y-4">
                                 <p class="text-slate-400">
-                                    <span class="text-red-400 font-bold uppercase tracking-wide">PROBLEM:</span> 
+                                    <span class="text-slate-300 font-medium">Problem:</span> 
                                     <span data-i18n="projects.bookwiz.problem">Authors and writers were struggling with writer's block and needed a tool that provided intelligent, context-aware assistance beyond simple grammar checks.</span>
                                 </p>
                                 
                                 <p class="text-slate-400">
-                                    <span class="text-blue-400 font-bold uppercase tracking-wide">MY SOLUTION:</span> 
+                                    <span class="text-slate-300 font-medium">Solution:</span> 
                                     <span data-i18n="projects.bookwiz.solution">Built an agentic AI writing assistant from the ground up, with a complete SaaS platform including user management, Stripe payments, and a high-performance backend.</span>
                                 </p>
                                 
                                 <div class="text-slate-400">
                                     <strong class="text-white text-lg block mb-2" data-i18n="projects.bookwiz.headline">💰 Scaled a solo-founder SaaS to $3,000 MRR and 55,000+ users.</strong>
-                                    <span class="text-green-400 font-bold uppercase tracking-wide">THE RESULT:</span> 
+                                    <span class="text-slate-300 font-medium">Result:</span> 
                                     <span data-i18n="projects.bookwiz.result">This platform now serves authors worldwide with a complete SaaS infrastructure. Built a product that people actually pay for.</span>
                                 </div>
                             </div>
@@ -355,12 +367,28 @@
                         
                         <!-- Image Container -->
                         <div class="project-image-container lg:order-2">
-                            <div class="project-image-placeholder">
-                                <div class="flex items-center justify-center h-full">
-                                    <div class="text-center">
-                                        <div class="text-4xl mb-4">📝💡</div>
-                                        <div class="text-slate-400 text-sm">App Dashboard Mockup</div>
+                            <div class="bookwiz-slideshow relative">
+                                <div class="slideshow-container">
+                                    <div class="slide active">
+                                        <img src="bookwiz1.png" alt="BookWiz Dashboard Interface" class="w-full h-auto rounded-lg shadow-lg border border-slate-700">
+                                    </div>
+                                    <div class="slide">
+                                        <img src="bookwiz2.png" alt="BookWiz Writing Assistant" class="w-full h-auto rounded-lg shadow-lg border border-slate-700">
+                                    </div>
+                                    <div class="slide">
+                                        <img src="bookwiz3.png" alt="BookWiz AI Features" class="w-full h-auto rounded-lg shadow-lg border border-slate-700">
+                                    </div>
                                 </div>
+                                
+                                <!-- Navigation arrows -->
+                                <button class="slideshow-prev" onclick="changeSlide(-1)">❮</button>
+                                <button class="slideshow-next" onclick="changeSlide(1)">❯</button>
+                                
+                                <!-- Dots indicator -->
+                                <div class="slideshow-dots">
+                                    <span class="dot active" onclick="currentSlide(1)"></span>
+                                    <span class="dot" onclick="currentSlide(2)"></span>
+                                    <span class="dot" onclick="currentSlide(3)"></span>
                                 </div>
                             </div>
                         </div>
@@ -372,13 +400,18 @@
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <!-- Image Container -->
                         <div class="project-image-container">
-                            <div class="project-image-placeholder">
-                                <div class="flex items-center justify-center h-full">
-                                    <div class="text-center">
-                                        <div class="text-4xl mb-4">🍺📱</div>
-                                        <div class="text-slate-400 text-sm">QR Quiz System in Action</div>
-                                </div>
-                                </div>
+                            <div class="video-container">
+                                <video 
+                                    class="w-full h-auto rounded-lg shadow-lg" 
+                                    controls 
+                                    muted
+                                    preload="metadata"
+                                    poster=""
+                                >
+                                    <source src="quiz.mov" type="video/quicktime">
+                                    <source src="quiz.mov" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
                             </div>
                         </div>
                         
@@ -390,18 +423,18 @@
                             
                             <div class="space-y-4">
                                 <p class="text-slate-400">
-                                    <span class="text-red-400 font-bold uppercase tracking-wide">PROBLEM:</span> 
+                                    <span class="text-slate-300 font-medium">Problem:</span> 
                                     <span data-i18n="projects.vkashti.problem">A popular local bar was struggling with operational chaos, from reservations and inventory to staff coordination and customer engagement.</span>
                                 </p>
                                 
                                 <p class="text-slate-400">
-                                    <span class="text-blue-400 font-bold uppercase tracking-wide">MY SOLUTION:</span> 
+                                    <span class="text-slate-300 font-medium">Solution:</span> 
                                     <span data-i18n="projects.vkashti.solution">Developed a comprehensive web platform and AI-powered Discord bots to automate everything: reservations with SMS confirmations, staff task delegation, natural language inventory tracking, and even real-time quiz nights.</span>
                                 </p>
                                 
                                 <div class="text-slate-400">
                                     <strong class="text-white text-lg block mb-2" data-i18n="projects.vkashti.headline">⚡ Streamlined 90% of daily bar operations with AI automation.</strong>
-                                    <span class="text-green-400 font-bold uppercase tracking-wide">THE RESULT:</span> 
+                                    <span class="text-slate-300 font-medium">Result:</span> 
                                     <span data-i18n="projects.vkashti.result">Increased efficiency and proved I can apply complex tech solutions to solve messy, real-world business problems.</span>
                                 </div>
                             </div>
