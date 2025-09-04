@@ -9,11 +9,14 @@ const languages = {
         'nav.contact': 'Contact Me',
         
         // Hero section
-        'hero.title': 'AI Engineer & Product Builder',
-        'hero.description': 'I turn complex AI problems into profitable SaaS solutions that generate real revenue - like scaling Bookwiz.io to $3K MRR in under 12 months. With 9+ years of startup experience, I specialize in building intelligent applications that solve real-world problems and generate revenue from day one.',
-        'hero.experience': '9+ Years Experience',
-        'hero.mrr': '$3K MRR Achieved',
-        'hero.retention': '95% Client Retention',
+        'hero.title': 'Independent AI Product Engineer',
+        'hero.description': 'Tired of slow agencies and risky junior hires? I\'m the alternative: an independent product engineer who ships.',
+        'hero.achievement_1': 'Scaled an AI SaaS to $3k MRR and 55,000+ users.',
+        'hero.achievement_2': 'Built a viral AI benchmark that reveals a model\'s true character.',
+        'hero.achievement_3': 'De-risk your roadmap and turn vision into product in weeks, not months.',
+        'hero.metrics.mrr': 'Scaled to $3K MRR',
+        'hero.metrics.users': 'Grew to 55K+ Users',
+        'hero.metrics.retention': 'Client Retention',
         
         // Achievements
         'achievements.mrr': 'Monthly Recurring Revenue',
@@ -21,10 +24,8 @@ const languages = {
         'achievements.years': 'Years of Experience',
         
         // Toolkit
-        'toolkit.title': 'My Toolkit',
-        'toolkit.subtitle': 'A selection of technologies I use to build high-quality software.',
-        'toolkit.primary': 'Primary Stack',
-        'toolkit.secondary': 'Secondary/Familiar',
+        'toolkit.title': 'Technologies I Use to Deliver Results',
+        'toolkit.subtitle': 'My battle-tested stack for building AI products that scale.',
         
         // Projects
         'projects.title': 'Featured Projects',
@@ -37,14 +38,16 @@ const languages = {
         'projects.discord': 'Discord Bots →',
         
         // Bookwiz project
-        'projects.bookwiz.problem': 'Authors struggled with writer\'s block and needed intelligent assistance to improve their writing quality and productivity.',
-        'projects.bookwiz.solution': 'Built an agentic AI writing assistant using LLMs and vector embeddings for context-aware suggestions, with a complete SaaS platform including payments and SEO optimization.',
-        'projects.bookwiz.result': 'Scaled to $3,000 MRR, serving hundreds of authors with a Node.js backend, React frontend, Stripe integration, and server-side rendering for maximum visibility. Achieved 99.9% uptime with 200ms average response time. Platform now serves 55,000+ registered users worldwide.',
+        'projects.bookwiz.problem': 'Authors and writers were struggling with writer\'s block and needed a tool that provided intelligent, context-aware assistance beyond simple grammar checks.',
+        'projects.bookwiz.solution': 'Built an agentic AI writing assistant from the ground up, with a complete SaaS platform including user management, Stripe payments, and a high-performance backend.',
+        'projects.bookwiz.headline': 'Scaled a solo-founder SaaS to $3,000 MRR and 55,000+ users.',
+        'projects.bookwiz.result': 'This platform now serves authors worldwide with a complete SaaS infrastructure. Built a product that people actually pay for.',
         
         // Vkashti project
-        'projects.vkashti.problem': 'Sofia bar needed a complete digital solution for reservations, event management, staff coordination, inventory tracking, and interactive quiz nights.',
-        'projects.vkashti.solution': 'Developed a comprehensive web platform with customer reservation system, admin dashboard for staff management, and AI-powered Discord bots for automated task management and inventory tracking using natural language processing.',
-        'projects.vkashti.result': 'Streamlined bar operations with automated SMS confirmations, intelligent task delegation, AI-driven inventory management, and engaging quiz nights that increased operational efficiency and customer satisfaction.',
+        'projects.vkashti.problem': 'A popular local bar was struggling with operational chaos, from reservations and inventory to staff coordination and customer engagement.',
+        'projects.vkashti.solution': 'Developed a comprehensive web platform and AI-powered Discord bots to automate everything: reservations with SMS confirmations, staff task delegation, natural language inventory tracking, and even real-time quiz nights.',
+        'projects.vkashti.headline': 'Streamlined 90% of daily bar operations with AI automation.',
+        'projects.vkashti.result': 'Increased efficiency and proved I can apply complex tech solutions to solve messy, real-world business problems.',
         'projects.vkashti.feature1': 'QR code quiz system with real-time scoring',
         'projects.vkashti.feature2': 'Reservation system with SMS confirmations',
         'projects.vkashti.feature3': 'AI-powered Discord bots for task management',
@@ -58,6 +61,12 @@ const languages = {
         'projects.trading.solution': 'Developed high-frequency trading bots in Python interfacing with Binance and ByBit APIs, implementing complex strategies based on market indicators and technical analysis.',
         'projects.trading.result': 'Achieved 18% annualized return over 24 months, outperforming ETH by 12% while reducing manual intervention by 90% through automated execution. Implemented risk management protocols for sustainable trading.',
         
+        // AI War Zone project
+        'projects.aiwarzone.problem': 'Businesses are choosing multi-million dollar AI models based on incomplete data. They test for capability but are blind to a model\'s character—its trustworthiness, strategic flaws, and potential for ruthless or naive behavior.',
+        'projects.aiwarzone.solution': 'I built a full-stack platform that forces top LLMs into the Prisoner\'s Dilemma, creating the first public benchmark for their emergent strategic behavior.',
+        'projects.aiwarzone.headline': 'Sparked viral discussion across AI communities.',
+        'projects.aiwarzone.result': 'Revealed unique "personality" flaws in major AI models, creating a viral project cited by AI enthusiasts and demonstrating deep expertise in multi-LLM integration and behavioral analysis.',
+        
         // CMS project
         'projects.cms.title': 'Custom CMS Systems',
         'projects.cms.problem': 'Clients needed flexible content management without the bloat and limitations of off-the-shelf solutions.',
@@ -67,7 +76,7 @@ const languages = {
         // Experience
         'experience.title': 'Career Journey',
         'experience.moonhythe.title': 'Founder & Lead Developer @ Moonhythe',
-        'experience.moonhythe.description': 'Built and scaled multiple SaaS products to profitability, including Bookwiz.io ($3K MRR). Delivered 15+ client projects with 95% client retention rate. Specialized in AI integration and full-stack development.',
+        'experience.moonhythe.description': 'As the principal of Moonhythe, I\'ve acted as a fractional CTO and lead AI engineer for 15+ clients. My focus is taking AI products from concept to launch, with expertise in full-stack development and AI integration.',
         'experience.researchspace.title': 'Lead Frontend Developer @ ResearchSpace',
         'experience.researchspace.description': 'Led frontend development for new product launches and modernized core application from jQuery to React, improving performance by 40% and reducing maintenance overhead by 60%.',
         'experience.bgmentor.title': 'Co-Founder & CTO @ BgMentor',
@@ -93,25 +102,27 @@ const languages = {
         'education.highschool.description': 'Specialized mathematics and science education with focus on advanced problem-solving and analytical thinking.',
         
         // Career
-        'career.title': 'What I\'m Looking For',
-        'career.ideal.title': 'Ideal Role',
-        'career.ideal.role1': 'Senior AI Engineer or Technical Lead',
-        'career.ideal.role2': 'Product-focused engineering teams',
-        'career.ideal.role3': 'AI/ML startup environments',
-        'career.ideal.role4': 'Remote-first companies',
-        'career.bring.title': 'What I Bring',
-        'career.bring.skill1': 'Proven track record of building profitable products',
-        'career.bring.skill2': 'Deep expertise in modern AI technologies',
-        'career.bring.skill3': 'Full-stack development capabilities',
-        'career.bring.skill4': 'Business acumen and strategic thinking',
+        'career.title': 'My Playbook: How We Can Work Together',
+        'career.subtitle': 'I offer three focused engagements designed for speed and impact.',
+        'career.offers.sprint.title': 'AI Feature Sprint',
+        'career.offers.sprint.benefit': 'Your fastest path from idea to a working prototype.',
+        'career.offers.sprint.description': 'A fixed 4-week engagement to build and ship one core AI feature.',
+        'career.offers.sprint.price': 'Starting at $10k',
+        'career.offers.strategy.title': 'AI Strategy & Roadmap',
+        'career.offers.strategy.benefit': 'A 2-day intensive to de-risk your plan.',
+        'career.offers.strategy.description': 'We\'ll define the highest-impact features, choose the right models, and create a clear technical roadmap.',
+        'career.offers.strategy.price': 'Fixed 2-Day Engagement',
+        'career.offers.fractional.title': 'Fractional AI Lead',
+        'career.offers.fractional.benefit': 'Ongoing technical leadership and development.',
+        'career.offers.fractional.description': 'I act as your dedicated AI expert to guide your team and product, without the full-time overhead.',
+        'career.offers.fractional.price': 'Monthly Retainer (Inquire)',
         
         // CTA
-        'cta.title': 'Have a project in mind?',
-        'cta.subtitle': 'I\'m currently available for remote contract work and select full-time opportunities. Let\'s build something great together.',
-        'cta.specialize': 'I specialize in:',
-        'cta.contact': 'Get in Touch',
+        'cta.title': 'Ready to build something incredible?',
+        'cta.subtitle': 'I take on a limited number of projects per quarter to ensure every client gets the focus they deserve. My slots are filling up for Q4.',
+        'cta.description': 'If you\'re a founder who needs to move fast and build with an expert, let\'s talk.',
+        'cta.contact': 'Book a Free 15-Min Strategy Call',
         'cta.work': 'View My Work',
-        'cta.cv': 'Download CV',
         
         // Footer
         'footer.built': 'Designed and built from scratch.',
@@ -162,11 +173,14 @@ const languages = {
         'nav.contact': 'Свържете се с мен',
         
         // Hero section
-        'hero.title': 'AI Инженер & Създател на Продукти',
-        'hero.description': 'Превръщам сложни AI проблеми в печеливши SaaS решения, които генерират реален доход - като мащабиране на Bookwiz.io до $3K MRR за по-малко от 12 месеца. С над 9 години стартъп опит, специализирам се в изграждането на интелигентни приложения, които решават реални световни проблеми и генерират доход от първия ден.',
-        'hero.experience': '9+ Години Опит',
-        'hero.mrr': '$3K MRR Постигнато',
-        'hero.retention': '95% Запазване на Клиенти',
+        'hero.title': 'Независим AI Продуктов Инженер',
+        'hero.description': 'Омръзна ли ви от бавни агенции и рискови младши назначения? Аз съм алтернативата: независим продуктов инженер, който доставя.',
+        'hero.achievement_1': 'Мащабирах AI SaaS до $3k MRR и 55 000+ потребители.',
+        'hero.achievement_2': 'Изградих вирален AI бенчмарк, който разкрива истинския характер на модела.',
+        'hero.achievement_3': 'Намалявам риска от пътеводителя и превръщам визията в продукт за седмици, не месеци.',
+        'hero.metrics.mrr': 'Мащабирах до $3K MRR',
+        'hero.metrics.users': 'Нарастнах до 55K+ Потребители',
+        'hero.metrics.retention': 'Запазване на Клиенти',
         
         // Achievements
         'achievements.mrr': 'Месечен Повтарящ се Приход',
@@ -174,10 +188,8 @@ const languages = {
         'achievements.years': 'Години Опит',
         
         // Toolkit
-        'toolkit.title': 'Моите Инструменти',
-        'toolkit.subtitle': 'Селекция от технологии, които използвам за изграждане на висококачествен софтуер.',
-        'toolkit.primary': 'Основен Стек',
-        'toolkit.secondary': 'Вторичен/Запознат',
+        'toolkit.title': 'Технологии, които използвам за постигане на резултати',
+        'toolkit.subtitle': 'Моят проверен стек за изграждане на AI продукти, които мащабират.',
         
         // Projects
         'projects.title': 'Избрани Проекти',
@@ -211,6 +223,11 @@ const languages = {
         'projects.trading.solution': 'Развих високочестотни търговски ботове в Python, свързващи се с Binance и ByBit API-та, имплементирайки сложни стратегии базирани на пазарни индикатори и технически анализ.',
         'projects.trading.result': 'Постигнах 18% годишна възвръщаемост за 24 месеца, надминавайки ETH с 12%, докато намалих ръчната намеса с 90% чрез автоматизирано изпълнение. Имплементирах протоколи за управление на риска за устойчива търговия.',
         
+        // AI War Zone project
+        'projects.aiwarzone.problem': 'Стандартните AI бенчмаркове тестват способностите, но игнорират характера. Това оставя бизнесите да гадаят за надеждността, достоверността и стратегическите недостатъци на модела в реални сценарии.',
+        'projects.aiwarzone.solution': 'Изградих платформа с пълен стек, която принуждава водещите LLM-и (от Google, OpenAI, Anthropic) в класическата Дилема на Затворника, създавайки нов бенчмарк за тяхното възникващо стратегическо поведение и "характер".',
+        'projects.aiwarzone.result': 'Разкрих уникални характерни профили за основните AI модели, създавайки вирален проект, който демонстрира дълбок експерт в мулти-LLM интеграция, поведенчески анализ и изграждане на продукти със силен разказ.',
+        
         // CMS project
         'projects.cms.title': 'Персонализирани CMS Системи',
         'projects.cms.problem': 'Клиентите се нуждаеха от гъвкаво управление на съдържанието без излишъка и ограниченията на готовите решения.',
@@ -220,7 +237,7 @@ const languages = {
         // Experience
         'experience.title': 'Кариерен Път',
         'experience.moonhythe.title': 'Основател & Главен Разработчик @ Moonhythe',
-        'experience.moonhythe.description': 'Изградих и мащабирах множество SaaS продукти до рентабилност, включвайки Bookwiz.io ($3K MRR). Доставих 15+ клиентски проекта с 95% процент на запазване на клиенти. Специализирах се в AI интеграция и full-stack разработка.',
+        'experience.moonhythe.description': 'Като главен на Moonhythe, действах като фракционен CTO и водещ AI инженер за 15+ клиенти. Фокусът ми е да вземам AI продукти от концепция до стартиране, с експертиза в full-stack разработка и AI интеграция.',
         'experience.researchspace.title': 'Главен Frontend Разработчик @ ResearchSpace',
         'experience.researchspace.description': 'Водих frontend разработката за нови продукти и модернизирах основното приложение от jQuery към React, подобрявайки производителността с 40% и намалявайки поддръжката с 60%.',
         'experience.bgmentor.title': 'Съосновател & CTO @ BgMentor',
@@ -246,25 +263,27 @@ const languages = {
         'education.highschool.description': 'Специализирано математическо и научно образование с фокус върху разширено решаване на проблеми и аналитично мислене.',
         
         // Career
-        'career.title': 'Какво Търся',
-        'career.ideal.title': 'Идеална Роля',
-        'career.ideal.role1': 'Старши AI Инженер или Технически Лийд',
-        'career.ideal.role2': 'Продуктово-фокусирани инженерни екипи',
-        'career.ideal.role3': 'AI/ML стартъп среди',
-        'career.ideal.role4': 'Компании с приоритет на дистанционната работа',
-        'career.bring.title': 'Какво Нося',
-        'career.bring.skill1': 'Доказан опит в изграждане на печеливши продукти',
-        'career.bring.skill2': 'Дълбок опит в модерни AI технологии',
-        'career.bring.skill3': 'Full-stack разработни възможности',
-        'career.bring.skill4': 'Бизнес проницателност и стратегическо мислене',
+        'career.title': 'Моята Стратегия: Как Можем да Работим Заедно',
+        'career.subtitle': 'Предлагам три фокусирани ангажимента, проектирани за скорост и въздействие.',
+        'career.offers.sprint.title': 'AI Функционален Спринт',
+        'career.offers.sprint.benefit': 'Най-бързият ви път от идея до работещ прототип.',
+        'career.offers.sprint.description': 'Фиксирано 4-седмично ангажиране за изграждане и пускане на една основна AI функция.',
+        'career.offers.sprint.price': 'Започва от $10k',
+        'career.offers.strategy.title': 'AI Стратегия & Пътеводител',
+        'career.offers.strategy.benefit': '2-дневен интензивен за намаляване на риска от плана ви.',
+        'career.offers.strategy.description': 'Ще дефинираме функциите с най-голямо въздействие, ще изберем правилните модели и ще създадем ясен технически пътеводител.',
+        'career.offers.strategy.price': 'Фиксирано 2-Дневно Ангажиране',
+        'career.offers.fractional.title': 'Фракционен AI Лийд',
+        'career.offers.fractional.benefit': 'Текущо техническо лидерство и разработка.',
+        'career.offers.fractional.description': 'Действам като вашия посветен AI експерт за ръководство на екипа и продукта ви, без разходите за пълно работно време.',
+        'career.offers.fractional.price': 'Месечен Абонамент (Запитване)',
         
         // CTA
-        'cta.title': 'Имате проект наум?',
-        'cta.subtitle': 'В момента съм свободен за дистанционна работа и избрани пълно работно време позиции. Нека създадем нещо страхотно заедно.',
-        'cta.specialize': 'Специализирам се в:',
-        'cta.contact': 'Свържете се с мен',
+        'cta.title': 'Готови ли сте да изградим нещо невероятно?',
+        'cta.subtitle': 'Приемам ограничен брой проекти на тримесечие, за да гарантирам, че всеки клиент получава фокуса, който заслужава. Местата ми се запълват за Q4.',
+        'cta.description': 'Ако сте основател, който трябва да се движи бързо и да строи с експерт, нека да поговорим.',
+        'cta.contact': 'Резервирайте Безплатна 15-Минутна Стратегическа Разговор',
         'cta.work': 'Вижте работата ми',
-        'cta.cv': 'Изтеглете CV',
         
         // Footer
         'footer.built': 'Създадено от нулата.',
