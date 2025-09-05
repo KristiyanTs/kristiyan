@@ -11,10 +11,10 @@ const languages = {
         // Hero section
         'hero.title': 'Independent AI Product Engineer',
         'hero.description': 'Tired of slow agencies and risky junior hires? I\'m the alternative: an independent product engineer who ships.',
-        'hero.achievement_1': 'Scaled an AI SaaS to $3k MRR and 55,000+ users.',
+        'hero.achievement_1': 'Scaled an AI SaaS to $3.3k MRR and 55,000+ users.',
         'hero.achievement_2': 'Built a viral AI benchmark that reveals a model\'s true character.',
         'hero.achievement_3': 'De-risk your roadmap and turn vision into product in weeks, not months.',
-        'hero.metrics.mrr': 'Scaled to $3K MRR',
+        'hero.metrics.mrr': 'Scaled to $3.3K MRR',
         'hero.metrics.users': 'Grew to 55K+ Users',
         'hero.metrics.retention': 'Client Retention',
         
@@ -40,7 +40,7 @@ const languages = {
         // Bookwiz project
         'projects.bookwiz.problem': 'Authors and writers were struggling with writer\'s block and needed a tool that provided intelligent, context-aware assistance beyond simple grammar checks.',
         'projects.bookwiz.solution': 'Built an agentic AI writing assistant from the ground up, with a complete SaaS platform including user management, Stripe payments, and a high-performance backend.',
-        'projects.bookwiz.headline': 'Scaled a solo-founder SaaS to $3,000 MRR and 55,000+ users.',
+        'projects.bookwiz.headline': 'Scaled a solo-founder SaaS to $3,300 MRR and 55,000+ users.',
         'projects.bookwiz.result': 'This platform now serves authors worldwide with a complete SaaS infrastructure. Built a product that people actually pay for.',
         
         // Vkashti project
@@ -175,10 +175,10 @@ const languages = {
         // Hero section
         'hero.title': 'Независим AI Продуктов Инженер',
         'hero.description': 'Омръзна ли ви от бавни агенции и рискови младши назначения? Аз съм алтернативата: независим продуктов инженер, който доставя.',
-        'hero.achievement_1': 'Мащабирах AI SaaS до $3k MRR и 55 000+ потребители.',
+        'hero.achievement_1': 'Мащабирах AI SaaS до $3.3k MRR и 55 000+ потребители.',
         'hero.achievement_2': 'Изградих вирален AI бенчмарк, който разкрива истинския характер на модела.',
         'hero.achievement_3': 'Намалявам риска от пътеводителя и превръщам визията в продукт за седмици, не месеци.',
-        'hero.metrics.mrr': 'Мащабирах до $3K MRR',
+        'hero.metrics.mrr': 'Мащабирах до $3.3K MRR',
         'hero.metrics.users': 'Нарастнах до 55K+ Потребители',
         'hero.metrics.retention': 'Запазване на Клиенти',
         
@@ -204,7 +204,7 @@ const languages = {
         // Bookwiz project
         'projects.bookwiz.problem': 'Авторите се бореха с писателския блок и се нуждаеха от интелигентна помощ за подобряване на качеството и продуктивността на писанията им.',
         'projects.bookwiz.solution': 'Изградих агентски AI асистент за писане, използващ LLM-и и векторни вграждания за контекстно-осъзнати предложения, с пълна SaaS платформа, включваща плащания и SEO оптимизация.',
-        'projects.bookwiz.result': 'Мащабирах до $3,000 MRR, обслужвайки стотици автори с Node.js backend, React frontend, Stripe интеграция и server-side rendering за максимална видимост. Постигнах 99.9% uptime с 200ms средно време за отговор. Платформата сега обслужва 55,000+ регистрирани потребители по света.',
+        'projects.bookwiz.result': 'Мащабирах до $3,300 MRR, обслужвайки стотици автори с Node.js backend, React frontend, Stripe интеграция и server-side rendering за максимална видимост. Постигнах 99.9% uptime с 200ms средно време за отговор. Платформата сега обслужва 55,000+ регистрирани потребители по света.',
         
         // Vkashti project
         'projects.vkashti.problem': 'Софийският бар се нуждаеше от пълно дигитално решение за резервации, управление на събития, координация на персонала, проследяване на инвентара и интерактивни вечери с въпроси.',
