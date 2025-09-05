@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://kristiyan.dev/</loc>
+        <loc>https://kristiyan.vercel.app/</loc>
         <lastmod>2024-12-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://kristiyan.dev/contacts.html</loc>
+        <loc>https://kristiyan.vercel.app/contacts.html</loc>
         <lastmod>2024-12-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://kristiyan.dev/cv.html</loc>
+        <loc>https://kristiyan.vercel.app/cv.html</loc>
         <lastmod>2024-12-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://kristiyan.dev/cv-ai-version.html</loc>
+        <loc>https://kristiyan.vercel.app/cv-ai-version.html</loc>
         <lastmod>2024-12-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://kristiyan.dev/cv-frontend-version.html</loc>
+        <loc>https://kristiyan.vercel.app/cv-frontend-version.html</loc>
         <lastmod>2024-12-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
